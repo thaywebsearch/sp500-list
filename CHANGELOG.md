@@ -13,14 +13,19 @@ Todas as alterações relevantes deste dataset serão documentadas aqui.
 ---
 
 ## [Planeado]
+
 ### v1.1
+### Planned
 - Atualização dos dados com base em alterações recentes no índice.
-- Normalização de nomes de setores e subsetores.
+- Normalização dos nomes de setores e subsetores.
 - Revisão de colunas adicionais (ex.: CIK, market cap, links oficiais).
 
 ### v2.0
+### Planned
 - Estrutura expandida do dataset.
 - Inclusão de metadados adicionais.
 - Possível automatização do processo de atualização.
 
 ---
+
+
