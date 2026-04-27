@@ -1,2 +1,39 @@
-dividend-kings/dividend_kings.csv
-
+ticker,company,sector,years_increasing_dividends,source_confirmation
+AWR,American States Water,Utilities,50+,3 sources
+CWT,California Water Service,Utilities,50+,3 sources
+NWN,Northwest Natural,Utilities,50+,3 sources
+PG,Procter & Gamble,Consumer Defensive,50+,3 sources
+KO,Coca-Cola,Consumer Defensive,50+,3 sources
+JNJ,Johnson & Johnson,Healthcare,50+,3 sources
+CL,Colgate-Palmolive,Consumer Defensive,50+,3 sources
+GPC,Genuine Parts,Consumer Cyclical,50+,3 sources
+EMR,Emerson Electric,Industrials,50+,3 sources
+DOV,Dover,Industrials,50+,3 sources
+LOW,Lowe's,Consumer Cyclical,50+,3 sources
+FRT,Federal Realty,Real Estate,50+,3 sources
+ABM,ABM Industries,Industrials,50+,3 sources
+SCL,Stepan,Basic Materials,50+,3 sources
+FUL,H.B. Fuller,Basic Materials,50+,3 sources
+UVV,Universal Corp,Consumer Defensive,50+,3 sources
+HRL,Hormel Foods,Consumer Defensive,50+,3 sources
+KMB,Kimberly-Clark,Consumer Defensive,50+,3 sources
+MSEX,Middlesex Water,Utilities,50+,2 sources
+MSA,MSA Safety,Industrials,50+,2 sources
+PPG,PPG Industries,Basic Materials,50+,2 sources
+RPM,RPM International,Basic Materials,50+,2 sources
+BKH,Black Hills,Utilities,50+,2 sources
+NFG,National Fuel Gas,Energy,50+,2 sources
+PEP,PepsiCo,Consumer Defensive,50+,2 sources
+MO,Altria,Consumer Defensive,50+,2 sources
+SWK,Stanley Black & Decker,Industrials,50+,2 sources
+TGT,Target,Consumer Cyclical,50+,2 sources
+SYY,Sysco,Consumer Defensive,50+,2 sources
+CINF,Cincinnati Financial,Financials,50+,2 sources
+TR,Tootsie Roll,Consumer Defensive,50+,2 sources
+GRC,Gorman-Rupp,Industrials,50+,2 sources
+PNR,Pentair,Industrials,50+,2 sources
+HTO,H2O America,Utilities,50+,1 source
+MGEE,MGE Energy,Utilities,50+,1 source
+RLI,RLI Corp,Financials,50+,1 source
+SPGI,S&P Global,Financials,50+,1 source
+ADP,Automatic Data Processing,Industrials,50+,1 source
