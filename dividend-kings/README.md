@@ -1,5 +1,7 @@
 # Dividend Kings Dataset (CSV)
-Dataset com as empresas americanas que aumentaram os dividendos por 50 anos consecutivos ou mais — conhecidas como **Dividend Kings**.
+![Release](https://img.shields.io/badge/release-v1.0-0A66C2?style=flat-square)
+![Version](https://img.shields.io/github/contents/thaywebsearch/sp500-list/main/dividend-kings/VERSION?label=version&color=0A66C2&style=flat-square)
+
 
 ## 📊 Conteúdo do dataset
 O ficheiro `dividend_kings.csv` inclui as seguintes colunas:
