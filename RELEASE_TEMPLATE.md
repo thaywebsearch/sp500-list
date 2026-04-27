@@ -29,10 +29,14 @@ Descrição breve da versão.
 ---
 
 ## 📘 Notas
-- (Qualquer detalhe adicional sobre a versão, limitações ou instruções)
+- (Detalhes adicionais sobre a versão, limitações ou instruções)
 - (Ex.: Dados extraídos automaticamente da Wikipédia via Google Sheets)
 
 ---
 
 ## 🔮 Próximos passos
-- (Itens planeados para a próxima versão, se quiseres incluir)
+- (Itens planeados para a próxima versão)
+
+
+
+
