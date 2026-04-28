@@ -246,3 +246,46 @@
 | JNPR   | Juniper Networks            | Information Technology   | Communications Equipment                          | https://finance.yahoo.com/quote/JNPR |
 | K      | Kellanova                   | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/K |
 | KDP    | Keurig Dr Pepper            | Consumer Staples         | Soft Drinks                                       | https://finance.yahoo.com/quote/KDP |
+| KHC    | Kraft Heinz                 | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/KHC |
+| KR     | Kroger                      | Consumer Staples         | Food Retail                                        | https://finance.yahoo.com/quote/KR |
+| LHX    | L3Harris Technologies       | Industrials              | Aerospace & Defense                                | https://finance.yahoo.com/quote/LHX |
+| LH     | LabCorp                     | Health Care              | Health Care Services                               | https://finance.yahoo.com/quote/LH |
+| LRCX   | Lam Research                | Information Technology   | Semiconductor Equipment                             | https://finance.yahoo.com/quote/LRCX |
+| LW     | Lamb Weston                 | Consumer Staples         | Packaged Foods & Meats                             | https://finance.yahoo.com/quote/LW |
+| LSTR   | Landstar System             | Industrials              | Trucking                                           | https://finance.yahoo.com/quote/LSTR |
+| LVS    | Las Vegas Sands             | Consumer Discretionary   | Casinos & Gaming                                   | https://finance.yahoo.com/quote/LVS |
+| LDOS   | Leidos                      | Industrials              | Research & Consulting Services                     | https://finance.yahoo.com/quote/LDOS |
+| LEN    | Lennar                      | Consumer Discretionary   | Homebuilding                                       | https://finance.yahoo.com/quote/LEN |
+| LLY    | Eli Lilly                   | Health Care              | Pharmaceuticals                                    | https://finance.yahoo.com/quote/LLY |
+| LIN    | Linde                       | Materials                | Industrial Gases                                   | https://finance.yahoo.com/quote/LIN |
+| LYV    | Live Nation Entertainment   | Communication Services   | Movies & Entertainment                             | https://finance.yahoo.com/quote/LYV |
+| LKQ    | LKQ Corporation             | Consumer Discretionary   | Auto Parts                                         | https://finance.yahoo.com/quote/LKQ |
+| LMT    | Lockheed Martin             | Industrials              | Aerospace & Defense                                | https://finance.yahoo.com/quote/LMT |
+| L     | Loews                       | Financials               | Multi-Sector Holdings                              | https://finance.yahoo.com/quote/L |
+| LOW    | Lowe's                      | Consumer Discretionary   | Home Improvement Retail                            | https://finance.yahoo.com/quote/LOW |
+| LUMN   | Lumen Technologies          | Communication Services   | Telecom Services                                   | https://finance.yahoo.com/quote/LUMN |
+| LYB    | LyondellBasell              | Materials                | Specialty Chemicals                                | https://finance.yahoo.com/quote/LYB |
+| MTB    | M&T Bank                    | Financials               | Regional Banks                                     | https://finance.yahoo.com/quote/MTB |
+| MRO    | Marathon Oil                | Energy                   | Oil & Gas Exploration & Production                 | https://finance.yahoo.com/quote/MRO |
+| MPC    | Marathon Petroleum          | Energy                   | Oil & Gas Refining & Marketing                     | https://finance.yahoo.com/quote/MPC |
+| MKTX   | MarketAxess                 | Financials               | Financial Exchanges & Data                         | https://finance.yahoo.com/quote/MKTX |
+| MAR    | Marriott International      | Consumer Discretionary   | Hotels, Resorts & Cruise Lines                     | https://finance.yahoo.com/quote/MAR |
+| MMC    | Marsh & McLennan            | Financials               | Insurance Brokers                                  | https://finance.yahoo.com/quote/MMC |
+| MLM    | Martin Marietta Materials   | Materials                | Construction Materials                             | https://finance.yahoo.com/quote/MLM |
+| MAS    | Masco                       | Industrials              | Building Products                                  | https://finance.yahoo.com/quote/MAS |
+| MA     | Mastercard                  | Financials               | Transaction & Payment Processing                   | https://finance.yahoo.com/quote/MA |
+| MTCH   | Match Group                 | Communication Services   | Interactive Media & Services                       | https://finance.yahoo.com/quote/MTCH |
+| MKC    | McCormick & Company         | Consumer Staples         | Packaged Foods & Meats                             | https://finance.yahoo.com/quote/MKC |
+| MCD    | McDonald's                  | Consumer Discretionary   | Restaurants                                        | https://finance.yahoo.com/quote/MCD |
+| MCK    | McKesson                    | Health Care              | Health Care Distributors                           | https://finance.yahoo.com/quote/MCK |
+| MDT    | Medtronic                   | Health Care              | Health Care Equipment                              | https://finance.yahoo.com/quote/MDT |
+| MRK    | Merck & Co.                 | Health Care              | Pharmaceuticals                                    | https://finance.yahoo.com/quote/MRK |
+| META   | Meta Platforms              | Communication Services   | Interactive Media & Services                       | https://finance.yahoo.com/quote/META |
+| MET    | MetLife                     | Financials               | Life & Health Insurance                            | https://finance.yahoo.com/quote/MET |
+| MTD    | Mettler-Toledo              | Health Care              | Life Sciences Tools & Services                     | https://finance.yahoo.com/quote/MTD |
+| MGM    | MGM Resorts                 | Consumer Discretionary   | Casinos & Gaming                                   | https://finance.yahoo.com/quote/MGM |
+| MCHP   | Microchip Technology        | Information Technology   | Semiconductors                                     | https://finance.yahoo.com/quote/MCHP |
+| MU     | Micron Technology           | Information Technology   | Semiconductors                                     | https://finance.yahoo.com/quote/MU |
+| MSFT   | Microsoft                   | Information Technology   | Systems Software                                   | https://finance.yahoo.com/quote/MSFT |
+| MAA    | Mid-America Apartment Comm. | Real Estate              | Residential REITs                                  | https://finance.yahoo.com/quote/MAA |
+| MRNA   | Moderna                     | Health Care              | Biotechnology                                      | https://finance.yahoo.com/quote/MRNA |
