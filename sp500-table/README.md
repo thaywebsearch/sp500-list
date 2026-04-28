@@ -1,5 +1,3 @@
-sp500-table/sp500-table.html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
