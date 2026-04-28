@@ -1,5 +1,6 @@
 # Dividend Kings Dataset (CSV)
 ![Release](https://img.shields.io/badge/release-v1.0-0A66C2?style=flat-square)
+[Ver Dividend Kings](https://thaywebsearch.github.io/sp500-list/dividend-kings/)
 
 ## 📌 Navegação por setor
 - [Utilities](#utilities)
