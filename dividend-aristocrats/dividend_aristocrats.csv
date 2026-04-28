@@ -1,0 +1,72 @@
+ticker,company,sector,years_increasing_dividends
+ABBV,AbbVie,Health Care,53
+ABT,Abbott Laboratories,Health Care,53
+ADM,Archer-Daniels-Midland,Consumer Staples,50
+ADP,Automatic Data Processing,Information Technology,50
+AFL,Aflac,Financials,44
+ALB,Albemarle,Materials,31
+AMCR,Amcor,Materials,30
+AOS,A.O. Smith,Industrials,32
+APD,Air Products & Chemicals,Materials,43
+ATO,Atmos Energy,Utilities,42
+BDX,Becton Dickinson,Health Care,54
+BEN,Franklin Resources,Financials,46
+BF.B,Brown-Forman,Consumer Staples,41
+BRO,Brown & Brown,Financials,32
+CAH,Cardinal Health,Health Care,29
+CAT,Caterpillar,Industrials,32
+CB,Chubb,Financials,32
+CHD,Church & Dwight,Consumer Staples,29
+CHRW,C.H. Robinson,Industrials,28
+CINF,Cincinnati Financial,Financials,65
+CL,Colgate-Palmolive,Consumer Staples,62
+CLX,Clorox,Consumer Staples,48
+CTAS,Cintas,Industrials,43
+CVX,Chevron,Energy,38
+DOV,Dover,Industrials,70
+ECL,Ecolab,Materials,34
+ED,Consolidated Edison,Utilities,51
+EMR,Emerson Electric,Industrials,69
+ERIE,Erie Indemnity,Financials,36
+ES,Eversource Energy,Utilities,27
+ESS,Essex Property Trust,Real Estate,31
+EXPD,Expeditors International,Industrials,29
+FAST,Fastenal,Industrials,25
+FDS,FactSet Research Systems,Financials,25
+FRT,Federal Realty,Real Estate,50
+GPC,Genuine Parts,Consumer Discretionary,50
+GWW,Grainger,Industrials,40
+HAS,Hasbro,Consumer Discretionary,25
+HRL,Hormel Foods,Consumer Staples,57
+IBM,IBM,Information Technology,29
+JNJ,Johnson & Johnson,Health Care,62
+KMB,Kimberly-Clark,Consumer Staples,53
+KO,Coca-Cola,Consumer Staples,62
+LEG,Leggett & Platt,Consumer Discretionary,52
+LIN,Linde,Materials,29
+LOW,Lowe's,Consumer Discretionary,50
+MCD,McDonald's,Consumer Discretionary,47
+MDT,Medtronic,Health Care,47
+MKC,McCormick,Consumer Staples,37
+MMM,3M,Industrials,64
+NDSN,Nordson,Industrials,60
+NFG,National Fuel Gas,Energy,52
+NUE,Nucor,Materials,50
+O,Realty Income,Real Estate,30
+PEP,PepsiCo,Consumer Staples,51
+PG,Procter & Gamble,Consumer Staples,67
+PNR,Pentair,Industrials,47
+PPG,PPG Industries,Materials,52
+ROP,Roper Technologies,Industrials,30
+RSG,Republic Services,Industrials,25
+SHW,Sherwin-Williams,Materials,45
+SJM,Smucker,Consumer Staples,28
+SPGI,S&P Global,Financials,50
+SWK,Stanley Black & Decker,Industrials,55
+SYY,Sysco,Consumer Staples,53
+TROW,T. Rowe Price,Financials,36
+VFC,VF Corp,Consumer Discretionary,50
+WBA,Walgreens Boots Alliance,Consumer Staples,47
+WMT,Walmart,Consumer Staples,50
+WST,West Pharmaceutical Services,Health Care,30
+XOM,Exxon Mobil,Energy,42
