@@ -2,488 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>S&P 500 — Full Table</title>
+<title>TESTE — Tabela</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        margin: 40px;
-        color: #222;
-    }
-
-    h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        font-weight: 600;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 14px;
-    }
-
-    thead th {
-        position: sticky;
-        top: 0;
-        background: #f7f7f7;
-        padding: 10px;
-        border-bottom: 2px solid #ddd;
-        z-index: 2;
-    }
-
-    tbody td {
-        padding: 8px 10px;
-        border-bottom: 1px solid #e5e5e5;
-    }
-
-    a {
-        color: #0056b3;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .sector-Industrials { background: #f2f2f2; }
-    .sector-HealthCare { background: #f4f4f4; }
-    .sector-InformationTechnology { background: #f1f1f1; }
-    .sector-Utilities { background: #f3f3f3; }
-    .sector-Financials { background: #efefef; }
-    .sector-ConsumerDiscretionary { background: #f5f5f5; }
-    .sector-ConsumerStaples { background: #f0f0f0; }
-    .sector-RealEstate { background: #f6f6f6; }
-    .sector-Energy { background: #ededed; }
-    .sector-CommunicationServices { background: #f8f8f8; }
-    .sector-Materials { background: #eaeaea; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+th {
+    background: #f2f2f2;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
 </style>
 </head>
 
 <body>
-<tr class="sector-Industrials">
-    <td><a href="https://finance.yahoo.com/quote/MMM" target="_blank">MMM</a></td>
-    <td>3M</td>
-    <td>Industrials</td>
-    <td>Industrial Conglomerates</td>
-</tr>
 
-<tr class="sector-Industrials">
-    <td><a href="https://finance.yahoo.com/quote/AOS" target="_blank">AOS</a></td>
-    <td>A. O. Smith</td>
-    <td>Industrials</td>
-    <td>Building Products</td>
-</tr>
-
-<tr class="sector-HealthCare">
-    <td><a href="https://finance.yahoo.com/quote/ABT" target="_blank">ABT</a></td>
-    <td>Abbott Laboratories</td>
-    <td>Health Care</td>
-    <td>Health Care Equipment</td>
-</tr>
-
-<tr class="sector-HealthCare">
-    <td><a href="https://finance.yahoo.com/quote/ABBV" target="_blank">ABBV</a></td>
-    <td>AbbVie</td>
-    <td>Health Care</td>
-    <td>Biotechnology</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/ACN" target="_blank">ACN</a></td>
-    <td>Accenture</td>
-    <td>Information Technology</td>
-    <td>IT Consulting & Other Services</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/ADBE" target="_blank">ADBE</a></td>
-    <td>Adobe Inc.</td>
-    <td>Information Technology</td>
-    <td>Application Software</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/AMD" target="_blank">AMD</a></td>
-    <td>Advanced Micro Devices</td>
-    <td>Information Technology</td>
-    <td>Semiconductors</td>
-</tr>
-
-<tr class="sector-Utilities">
-    <td><a href="https://finance.yahoo.com/quote/AES" target="_blank">AES</a></td>
-    <td>AES Corporation</td>
-    <td>Utilities</td>
-    <td>Independent Power Producers & Energy Traders</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AFL" target="_blank">AFL</a></td>
-    <td>Aflac</td>
-    <td>Financials</td>
-    <td>Life & Health Insurance</td>
-</tr>
-
-<tr class="sector-HealthCare">
-    <td><a href="https://finance.yahoo.com/quote/A" target="_blank">A</a></td>
-    <td>Agilent Technologies</td>
-    <td>Health Care</td>
-    <td>Life Sciences Tools & Services</td>
-</tr>
-
-<tr class="sector-Materials">
-    <td><a href="https://finance.yahoo.com/quote/APD" target="_blank">APD</a></td>
-    <td>Air Products</td>
-    <td>Materials</td>
-    <td>Industrial Gases</td>
-</tr>
-
-<tr class="sector-ConsumerDiscretionary">
-    <td><a href="https://finance.yahoo.com/quote/ABNB" target="_blank">ABNB</a></td>
-    <td>Airbnb</td>
-    <td>Consumer Discretionary</td>
-    <td>Hotels, Resorts & Cruise Lines</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/AKAM" target="_blank">AKAM</a></td>
-    <td>Akamai Technologies</td>
-    <td>Information Technology</td>
-    <td>Internet Services & Infrastructure</td>
-</tr>
-
-<tr class="sector-Materials">
-    <td><a href="https://finance.yahoo.com/quote/ALB" target="_blank">ALB</a></td>
-    <td>Albemarle Corporation</td>
-    <td>Materials</td>
-    <td>Specialty Chemicals</td>
-</tr>
-
-<tr class="sector-RealEstate">
-    <td><a href="https://finance.yahoo.com/quote/ARE" target="_blank">ARE</a></td>
-    <td>Alexandria Real Estate Equities</td>
-    <td>Real Estate</td>
-    <td>Office REITs</td>
-</tr>
-
-<tr class="sector-HealthCare">
-    <td><a href="https://finance.yahoo.com/quote/ALGN" target="_blank">ALGN</a></td>
-    <td>Align Technology</td>
-    <td>Health Care</td>
-    <td>Health Care Supplies</td>
-</tr>
-
-<tr class="sector-Industrials">
-    <td><a href="https://finance.yahoo.com/quote/ALLE" target="_blank">ALLE</a></td>
-    <td>Allegion</td>
-    <td>Industrials</td>
-    <td>Building Products</td>
-</tr>
-
-<tr class="sector-Utilities">
-    <td><a href="https://finance.yahoo.com/quote/LNT" target="_blank">LNT</a></td>
-    <td>Alliant Energy</td>
-    <td>Utilities</td>
-    <td>Electric Utilities</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/ALL" target="_blank">ALL</a></td>
-    <td>Allstate</td>
-    <td>Financials</td>
-    <td>Property & Casualty Insurance</td>
-</tr>
-
-<tr class="sector-CommunicationServices">
-    <td><a href="https://finance.yahoo.com/quote/GOOGL" target="_blank">GOOGL</a></td>
-    <td>Alphabet Inc. (Class A)</td>
-    <td>Communication Services</td>
-    <td>Interactive Media & Services</td>
-</tr>
-
-<tr class="sector-CommunicationServices">
-    <td><a href="https://finance.yahoo.com/quote/GOOG" target="_blank">GOOG</a></td>
-    <td>Alphabet Inc. (Class C)</td>
-    <td>Communication Services</td>
-    <td>Interactive Media & Services</td>
-</tr>
-
-<tr class="sector-ConsumerStaples">
-    <td><a href="https://finance.yahoo.com/quote/MO" target="_blank">MO</a></td>
-    <td>Altria</td>
-    <td>Consumer Staples</td>
-    <td>Tobacco</td>
-</tr>
-
-<tr class="sector-ConsumerDiscretionary">
-    <td><a href="https://finance.yahoo.com/quote/AMZN" target="_blank">AMZN</a></td>
-    <td>Amazon</td>
-    <td>Consumer Discretionary</td>
-    <td>Broadline Retail</td>
-</tr>
-
-<tr class="sector-Materials">
-    <td><a href="https://finance.yahoo.com/quote/AMCR" target="_blank">AMCR</a></td>
-    <td>Amcor</td>
-    <td>Materials</td>
-    <td>Paper & Plastic Packaging Products & Materials</td>
-</tr>
-
-<tr class="sector-Utilities">
-    <td><a href="https://finance.yahoo.com/quote/AEE" target="_blank">AEE</a></td>
-    <td>Ameren</td>
-    <td>Utilities</td>
-    <td>Multi-Utilities</td>
-</tr>
-
-<tr class="sector-Utilities">
-    <td><a href="https://finance.yahoo.com/quote/AEP" target="_blank">AEP</a></td>
-    <td>American Electric Power</td>
-    <td>Utilities</td>
-    <td>Electric Utilities</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AXP" target="_blank">AXP</a></td>
-    <td>American Express</td>
-    <td>Financials</td>
-    <td>Consumer Finance</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AIG" target="_blank">AIG</a></td>
-    <td>American International Group</td>
-    <td>Financials</td>
-    <td>Multi-line Insurance</td>
-</tr>
-
-<tr class="sector-RealEstate">
-    <td><a href="https://finance.yahoo.com/quote/AMT" target="_blank">AMT</a></td>
-    <td>American Tower</td>
-    <td>Real Estate</td>
-    <td>Telecom Tower REITs</td>
-</tr>
-
-<tr class="sector-Utilities">
-    <td><a href="https://finance.yahoo.com/quote/AWK" target="_blank">AWK</a></td>
-    <td>American Water Works</td>
-    <td>Utilities</td>
-    <td>Water Utilities</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AMP" target="_blank">AMP</a></td>
-    <td>Ameriprise Financial</td>
-    <td>Financials</td>
-    <td>Asset Management & Custody Banks</td>
-</tr>
-
-<tr class="sector-Industrials">
-    <td><a href="https://finance.yahoo.com/quote/AME" target="_blank">AME</a></td>
-    <td>Ametek</td>
-    <td>Industrials</td>
-    <td>Electrical Components & Equipment</td>
-</tr>
-
-<tr class="sector-HealthCare">
-    <td><a href="https://finance.yahoo.com/quote/AMGN" target="_blank">AMGN</a></td>
-    <td>Amgen</td>
-    <td>Health Care</td>
-    <td>Biotechnology</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/APH" target="_blank">APH</a></td>
-    <td>Amphenol</td>
-    <td>Information Technology</td>
-    <td>Electronic Components</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/ADI" target="_blank">ADI</a></td>
-    <td>Analog Devices</td>
-    <td>Information Technology</td>
-    <td>Semiconductors</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AON" target="_blank">AON</a></td>
-    <td>Aon plc</td>
-    <td>Financials</td>
-    <td>Insurance Brokers</td>
-</tr>
-
-<tr class="sector-Energy">
-    <td><a href="https://finance.yahoo.com/quote/APA" target="_blank">APA</a></td>
-    <td>APA Corporation</td>
-    <td>Energy</td>
-    <td>Oil & Gas Exploration & Production</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/APO" target="_blank">APO</a></td>
-    <td>Apollo Global Management</td>
-    <td>Financials</td>
-    <td>Asset Management & Custody Banks</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/AAPL" target="_blank">AAPL</a></td>
-    <td>Apple Inc.</td>
-    <td>Information Technology</td>
-    <td>Technology Hardware, Storage & Peripherals</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/AMAT" target="_blank">AMAT</a></td>
-    <td>Applied Materials</td>
-    <td>Information Technology</td>
-    <td>Semiconductor Materials & Equipment</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/APP" target="_blank">APP</a></td>
-    <td>AppLovin</td>
-    <td>Information Technology</td>
-    <td>Application Software</td>
-</tr>
-
-<tr class="sector-ConsumerDiscretionary">
-    <td><a href="https://finance.yahoo.com/quote/APTV" target="_blank">APTV</a></td>
-    <td>Aptiv</td>
-    <td>Consumer Discretionary</td>
-    <td>Automotive Parts & Equipment</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/ACGL" target="_blank">ACGL</a></td>
-    <td>Arch Capital Group</td>
-    <td>Financials</td>
-    <td>Property & Casualty Insurance</td>
-</tr>
-
-<tr class="sector-ConsumerStaples">
-    <td><a href="https://finance.yahoo.com/quote/ADM" target="_blank">ADM</a></td>
-    <td>Archer Daniels Midland</td>
-    <td>Consumer Staples</td>
-    <td>Agricultural Products & Services</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/ARES" target="_blank">ARES</a></td>
-    <td>Ares Management</td>
-    <td>Financials</td>
-    <td>Asset Management & Custody Banks</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/ANET" target="_blank">ANET</a></td>
-    <td>Arista Networks</td>
-    <td>Information Technology</td>
-    <td>Communications Equipment</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AJG" target="_blank">AJG</a></td>
-    <td>Arthur J. Gallagher & Co.</td>
-    <td>Financials</td>
-    <td>Insurance Brokers</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td><a href="https://finance.yahoo.com/quote/AIZ" target="_blank">AIZ</a></td>
-    <td>Assurant</td>
-    <td>Financials</td>
-    <td>Multi-line Insurance</td>
-</tr>
-
-<tr class="sector-CommunicationServices">
-    <td><a href="https://finance.yahoo.com/quote/T" target="_blank">T</a></td>
-    <td>AT&T</td>
-    <td>Communication Services</td>
-    <td>Integrated Telecommunication Services</td>
-</tr>
-
-<tr class="sector-Utilities">
-    <td><a href="https://finance.yahoo.com/quote/ATO" target="_blank">ATO</a></td>
-    <td>Atmos Energy</td>
-    <td>Utilities</td>
-    <td>Gas Utilities</td>
-</tr>
-
-<tr class="sector-InformationTechnology">
-    <td><a href="https://finance.yahoo.com/quote/ADSK" target="_blank">ADSK</a></td>
-    <td>Autodesk</td>
-    <td>Information Technology</td>
-    <td>Application Software</td>
-</tr>
-
-<tr class="sector-Industrials">
-    <td><a href="https://finance.yahoo.com/quote/ADP" target="_blank">ADP</a></td>
-    <td>Automatic Data Processing</td>
-    <td>Industrials</td>
-    <td>Human Resource & Employment Services</td>
-</tr>
-
-<tr class="sector-ConsumerDiscretionary">
-    <td><a href="https://finance.yahoo.com/quote/AZO" target="_blank">AZO</a></td>
-    <td>AutoZone</td>
-    <td>Consumer Discretionary</td>
-    <td>Automotive Retail</td>
-</tr>
-
-<tr class="sector-RealEstate">
-    <td><a href="https://finance.yahoo.com/quote/AVB" target="_blank">AVB</a></td>
-    <td>AvalonBay Communities</td>
-    <td>Real Estate</td>
-    <td>Multi-Family Residential REITs</td>
-</tr>
-
-<tr class="sector-Materials">
-    <td><a href="https://finance.yahoo.com/quote/AVY" target="_blank">AVY</a></td>
-    <td>Avery Dennison</td>
-    <td>Materials</td>
-    <td>Paper & Plastic Packaging Products & Materials</td>
-</tr>
-
-<tr class="sector-Industrials">
-    <td><a href="https://finance.yahoo.com/quote/AXON" target="_blank">AXON</a></td>
-    <td>Axon Enterprise</td>
-    <td>Industrials</td>
-    <td>Aerospace & Defense</td>
-</tr>
-
-<tr class="sector-Energy">
-    <td><a href="https://finance.yahoo.com/quote/BKR" target="_blank">BKR</a></td>
-    <td>Baker Hughes</td>
-    <td>Energy</td>
-    <td>Oil & Gas Equipment & Services</td>
-</tr>
-
-<tr class="sector-Materials">
-    <td><a href="https://finance.yahoo.com/quote/BALL" target="_blank">BALL</a></td>
-    <td>Ball Corporation</td>
-    <td>Materials</td>
-    <td>Metal, Glass & Plastic Containers</td>
-</tr>
-
-<tr class="sector-Financials">
-    <td
-<h1>S&amp;P 500 — Full Company Table</h1>
+<h1>Teste de Tabela</h1>
 
 <table>
 <thead>
 <tr>
     <th>Symbol</th>
     <th>Security</th>
-    <th>GICS Sector</th>
-    <th>GICS Sub-Industry</th>
 </tr>
 </thead>
 
 <tbody>
+<tr>
+    <td>MMM</td>
+    <td>3M Company</td>
+</tr>
+
+<tr>
+    <td>AAPL</td>
+    <td>Apple Inc.</td>
+</tr>
+</tbody>
+
+</table>
+
+</body>
+</html>
 
  
-    
+   
+   
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
