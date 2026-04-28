@@ -1,0 +1,1 @@
+dividend-aristocrats/CHANGELOG.md
