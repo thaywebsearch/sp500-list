@@ -206,3 +206,43 @@
 | HSIC   | Henry Schein                 | Health Care              | Health Care Supplies                              | https://finance.yahoo.com/quote/HSIC |
 | HSY    | Hershey                      | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/HSY |
 | HES    | Hess Corporation             | Energy                   | Oil & Gas Exploration & Production                | https://finance.yahoo.com/quote/HES |
+| HPE    | Hewlett Packard Enterprise  | Information Technology   | Technology Hardware                              | https://finance.yahoo.com/quote/HPE |
+| HLX    | Helix Energy Solutions      | Energy                   | Oil & Gas Equipment & Services                    | https://finance.yahoo.com/quote/HLX |
+| HLT    | Hilton Worldwide            | Consumer Discretionary   | Hotels, Resorts & Cruise Lines                    | https://finance.yahoo.com/quote/HLT |
+| HOLX   | Hologic                     | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/HOLX |
+| HD     | Home Depot                  | Consumer Discretionary   | Home Improvement Retail                           | https://finance.yahoo.com/quote/HD |
+| HON    | Honeywell                   | Industrials              | Industrial Conglomerates                          | https://finance.yahoo.com/quote/HON |
+| HRL    | Hormel Foods                | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/HRL |
+| HST    | Host Hotels & Resorts       | Real Estate              | Hotel & Resort REITs                              | https://finance.yahoo.com/quote/HST |
+| HWM    | Howmet Aerospace            | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/HWM |
+| HPQ    | HP Inc.                     | Information Technology   | Technology Hardware                               | https://finance.yahoo.com/quote/HPQ |
+| HUM    | Humana                      | Health Care              | Managed Health Care                               | https://finance.yahoo.com/quote/HUM |
+| HBAN   | Huntington Bancshares       | Financials               | Regional Banks                                    | https://finance.yahoo.com/quote/HBAN |
+| HII    | Huntington Ingalls          | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/HII |
+| IBM    | IBM                         | Information Technology   | IT Consulting & Other Services                    | https://finance.yahoo.com/quote/IBM |
+| IEX    | IDEX Corporation            | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/IEX |
+| IDXX   | IDEXX Laboratories          | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/IDXX |
+| ITW    | Illinois Tool Works         | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/ITW |
+| ILMN   | Illumina                    | Health Care              | Life Sciences Tools & Services                    | https://finance.yahoo.com/quote/ILMN |
+| INCY   | Incyte                      | Health Care              | Biotechnology                                     | https://finance.yahoo.com/quote/INCY |
+| IR     | Ingersoll Rand              | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/IR |
+| INTC   | Intel                       | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/INTC |
+| ICE    | Intercontinental Exchange   | Financials               | Financial Exchanges & Data                        | https://finance.yahoo.com/quote/ICE |
+| IFF    | International Flavors & Fragrances | Materials        | Specialty Chemicals                               | https://finance.yahoo.com/quote/IFF |
+| IP     | International Paper         | Materials                | Paper Packaging                                   | https://finance.yahoo.com/quote/IP |
+| IPG    | Interpublic Group           | Communication Services   | Advertising                                       | https://finance.yahoo.com/quote/IPG |
+| INTU   | Intuit                      | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/INTU |
+| ISRG   | Intuitive Surgical          | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/ISRG |
+| IVZ    | Invesco                     | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/IVZ |
+| INVH   | Invitation Homes            | Real Estate              | Single-Family Residential REITs                   | https://finance.yahoo.com/quote/INVH |
+| IQV    | IQVIA Holdings              | Health Care              | Life Sciences Tools & Services                    | https://finance.yahoo.com/quote/IQV |
+| IRM    | Iron Mountain               | Real Estate              | Specialized REITs                                 | https://finance.yahoo.com/quote/IRM |
+| JBHT   | J.B. Hunt Transport         | Industrials              | Trucking                                          | https://finance.yahoo.com/quote/JBHT |
+| JKHY   | Jack Henry & Associates     | Information Technology   | Data Processing & Outsourced Services             | https://finance.yahoo.com/quote/JKHY |
+| J     | Jacobs Solutions             | Industrials              | Construction & Engineering                        | https://finance.yahoo.com/quote/J |
+| JNJ    | Johnson & Johnson           | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/JNJ |
+| JCI    | Johnson Controls            | Industrials              | Building Products                                 | https://finance.yahoo.com/quote/JCI |
+| JPM    | JPMorgan Chase              | Financials               | Diversified Banks                                 | https://finance.yahoo.com/quote/JPM |
+| JNPR   | Juniper Networks            | Information Technology   | Communications Equipment                          | https://finance.yahoo.com/quote/JNPR |
+| K      | Kellanova                   | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/K |
+| KDP    | Keurig Dr Pepper            | Consumer Staples         | Soft Drinks                                       | https://finance.yahoo.com/quote/KDP |
