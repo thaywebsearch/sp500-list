@@ -132,3 +132,77 @@
 | DLTR   | Dollar Tree                 | Consumer Staples         | General Merchandise Stores                       | https://finance.yahoo.com/quote/DLTR |
 | D      | Dominion Energy             | Utilities                | Multi-Utilities                                  | https://finance.yahoo.com/quote/D |
 | DPZ    | Domino's Pizza              | Consumer Discretionary   | Restaurants                                      | https://finance.yahoo.com/quote/DPZ |
+| DOV    | Dover                        | Industrials              | Industrial Machinery                             | https://finance.yahoo.com/quote/DOV |
+| DOW    | Dow Inc.                     | Materials                | Commodity Chemicals                               | https://finance.yahoo.com/quote/DOW |
+| DTE    | DTE Energy                   | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/DTE |
+| DUK    | Duke Energy                  | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/DUK |
+| DD     | DuPont de Nemours            | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/DD |
+| DXC    | DXC Technology               | Information Technology   | IT Consulting & Other Services                    | https://finance.yahoo.com/quote/DXC |
+| EMN    | Eastman Chemical             | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/EMN |
+| ETN    | Eaton                        | Industrials              | Electrical Components & Equipment                 | https://finance.yahoo.com/quote/ETN |
+| EBAY   | eBay                         | Consumer Discretionary   | Broadline Retail                                  | https://finance.yahoo.com/quote/EBAY |
+| ECL    | Ecolab                       | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/ECL |
+| EIX    | Edison International         | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/EIX |
+| EW     | Edwards Lifesciences         | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/EW |
+| EA     | Electronic Arts              | Communication Services   | Interactive Home Entertainment                    | https://finance.yahoo.com/quote/EA |
+| ELV    | Elevance Health              | Health Care              | Managed Health Care                               | https://finance.yahoo.com/quote/ELV |
+| EMR    | Emerson Electric             | Industrials              | Electrical Components & Equipment                 | https://finance.yahoo.com/quote/EMR |
+| ENPH   | Enphase Energy               | Information Technology   | Solar Technology                                  | https://finance.yahoo.com/quote/ENPH |
+| ETR    | Entergy                      | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/ETR |
+| EOG    | EOG Resources                | Energy                   | Oil & Gas Exploration & Production                | https://finance.yahoo.com/quote/EOG |
+| EPAM   | EPAM Systems                 | Information Technology   | IT Consulting & Other Services                    | https://finance.yahoo.com/quote/EPAM |
+| EFX    | Equifax                      | Industrials              | Research & Consulting Services                    | https://finance.yahoo.com/quote/EFX |
+| EQIX   | Equinix                      | Real Estate              | Data Center REITs                                 | https://finance.yahoo.com/quote/EQIX |
+| EQR    | Equity Residential           | Real Estate              | Residential REITs                                 | https://finance.yahoo.com/quote/EQR |
+| ESS    | Essex Property Trust         | Real Estate              | Residential REITs                                 | https://finance.yahoo.com/quote/ESS |
+| EL     | Estée Lauder                 | Consumer Staples         | Personal Products                                 | https://finance.yahoo.com/quote/EL |
+| ETSY   | Etsy                         | Consumer Discretionary   | Broadline Retail                                  | https://finance.yahoo.com/quote/ETSY |
+| EVRG   | Evergy                       | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/EVRG |
+| ES     | Eversource Energy            | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/ES |
+| EXC    | Exelon                       | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/EXC |
+| EXPE   | Expedia Group                | Consumer Discretionary   | Hotels, Resorts & Cruise Lines                    | https://finance.yahoo.com/quote/EXPE |
+| EXPD   | Expeditors International     | Industrials              | Air Freight & Logistics                           | https://finance.yahoo.com/quote/EXPD |
+| EXR    | Extra Space Storage          | Real Estate              | Self-Storage REITs                                | https://finance.yahoo.com/quote/EXR |
+| XOM    | Exxon Mobil                  | Energy                   | Integrated Oil & Gas                              | https://finance.yahoo.com/quote/XOM |
+| FFIV   | F5                           | Information Technology   | Communications Equipment                          | https://finance.yahoo.com/quote/FFIV |
+| FDS    | FactSet Research Systems     | Financials               | Financial Exchanges & Data                        | https://finance.yahoo.com/quote/FDS |
+| FICO   | Fair Isaac                   | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/FICO |
+| FAST   | Fastenal                     | Industrials              | Industrial Machinery & Supplies                   | https://finance.yahoo.com/quote/FAST |
+| FRT    | Federal Realty               | Real Estate              | Retail REITs                                      | https://finance.yahoo.com/quote/FRT |
+| FDX    | FedEx                        | Industrials              | Air Freight & Logistics                           | https://finance.yahoo.com/quote/FDX |
+| FITB   | Fifth Third Bancorp          | Financials               | Regional Banks                                    | https://finance.yahoo.com/quote/FITB |
+| FSLR   | First Solar                  | Information Technology   | Solar Technology                                  | https://finance.yahoo.com/quote/FSLR |
+| FE     | FirstEnergy                  | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/FE |
+| FI     | Fiserv                       | Financials               | Data Processing & Outsourced Services             | https://finance.yahoo.com/quote/FI |
+| FIS    | Fidelity National Information| Financials               | Data Processing & Outsourced Services             | https://finance.yahoo.com/quote/FIS |
+| FLT    | FleetCor Technologies        | Industrials              | Transaction & Payment Processing                  | https://finance.yahoo.com/quote/FLT |
+| FMC    | FMC Corporation              | Materials                | Agricultural Chemicals                            | https://finance.yahoo.com/quote/FMC |
+| F      | Ford Motor                   | Consumer Discretionary   | Automobile Manufacturers                          | https://finance.yahoo.com/quote/F |
+| FTNT   | Fortinet                     | Information Technology   | Systems Software                                  | https://finance.yahoo.com/quote/FTNT |
+| FTV    | Fortive                      | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/FTV |
+| FOXA   | Fox Corporation (A)          | Communication Services   | Movies & Entertainment                            | https://finance.yahoo.com/quote/FOXA |
+| FOX    | Fox Corporation (B)          | Communication Services   | Movies & Entertainment                            | https://finance.yahoo.com/quote/FOX |
+| BEN    | Franklin Resources           | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/BEN |
+| FCX    | Freeport-McMoRan             | Materials                | Copper                                            | https://finance.yahoo.com/quote/FCX |
+| GRMN   | Garmin                       | Consumer Discretionary   | Consumer Electronics                              | https://finance.yahoo.com/quote/GRMN |
+| IT     | Gartner                      | Industrials              | Research & Consulting Services                    | https://finance.yahoo.com/quote/IT |
+| GE     | General Electric             | Industrials              | Industrial Conglomerates                          | https://finance.yahoo.com/quote/GE |
+| GEHC   | GE HealthCare                | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/GEHC |
+| GEN    | Gen Digital                  | Information Technology   | Systems Software                                  | https://finance.yahoo.com/quote/GEN |
+| GNRC   | Generac                     | Industrials              | Electrical Components & Equipment                 | https://finance.yahoo.com/quote/GNRC |
+| GD     | General Dynamics             | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/GD |
+| GIS    | General Mills                | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/GIS |
+| GM     | General Motors               | Consumer Discretionary   | Automobile Manufacturers                          | https://finance.yahoo.com/quote/GM |
+| GPC    | Genuine Parts                | Consumer Discretionary   | Automotive Retail                                 | https://finance.yahoo.com/quote/GPC |
+| GILD   | Gilead Sciences              | Health Care              | Biotechnology                                     | https://finance.yahoo.com/quote/GILD |
+| GPN    | Global Payments              | Financials               | Transaction & Payment Processing                  | https://finance.yahoo.com/quote/GPN |
+| GL     | Globe Life                   | Financials               | Life & Health Insurance                           | https://finance.yahoo.com/quote/GL |
+| GDDY   | GoDaddy                      | Information Technology   | Internet Services & Infrastructure                | https://finance.yahoo.com/quote/GDDY |
+| GS     | Goldman Sachs                | Financials               | Investment Banking & Brokerage                    | https://finance.yahoo.com/quote/GS |
+| HAL    | Halliburton                  | Energy                   | Oil & Gas Equipment & Services                    | https://finance.yahoo.com/quote/HAL |
+| HIG    | Hartford Financial Services  | Financials               | Property & Casualty Insurance                     | https://finance.yahoo.com/quote/HIG |
+| HAS    | Hasbro                      | Consumer Discretionary   | Leisure Products                                  | https://finance.yahoo.com/quote/HAS |
+| HCA    | HCA Healthcare               | Health Care              | Health Care Facilities                            | https://finance.yahoo.com/quote/HCA |
+| HSIC   | Henry Schein                 | Health Care              | Health Care Supplies                              | https://finance.yahoo.com/quote/HSIC |
+| HSY    | Hershey                      | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/HSY |
+| HES    | Hess Corporation             | Energy                   | Oil & Gas Exploration & Production                | https://finance.yahoo.com/quote/HES |
