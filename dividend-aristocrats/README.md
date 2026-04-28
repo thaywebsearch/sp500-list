@@ -3,6 +3,11 @@
 ![Version](https://img.shields.io/badge/Version-v1.0-0A66C2?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Stable-2E8B57?style=flat-square)
 
+## 📊 Visualizar a Tabela dos Dividend Aristocrats (GitHub Pages)
+
+[➡️ Ver Dividend Aristocrats (GitHub Pages)](https://thaywebsearch.github.io/sp500-list/dividend-aristocrats/)
+
+
 Dataset minimalista contendo as 69 empresas classificadas como **Dividend Aristocrats** em 2026 — empresas do S&P 500 com pelo menos 25 anos consecutivos de aumento de dividendos.
 
 ---
