@@ -82,3 +82,53 @@
 | CHRW   | C.H. Robinson                | Industrials              | Air Freight & Logistics                          | https://finance.yahoo.com/quote/CHRW |
 | CDNS   | Cadence Design Systems       | Information Technology   | Application Software                             | https://finance.yahoo.com/quote/CDNS |
 | CDW    | CDW                          | Information Technology   | Technology Distributors                          | https://finance.yahoo.com/quote/CDW |
+| CEG    | Constellation Energy        | Utilities                | Multi-Utilities                                  | https://finance.yahoo.com/quote/CEG |
+| CF     | CF Industries               | Materials                | Fertilizers & Agricultural Chemicals             | https://finance.yahoo.com/quote/CF |
+| CRL    | Charles River Laboratories  | Health Care              | Life Sciences Tools & Services                   | https://finance.yahoo.com/quote/CRL |
+| SCHW   | Charles Schwab              | Financials               | Investment Banking & Brokerage                   | https://finance.yahoo.com/quote/SCHW |
+| CHD    | Church & Dwight             | Consumer Staples         | Household Products                               | https://finance.yahoo.com/quote/CHD |
+| CI     | Cigna Group                 | Health Care              | Managed Health Care                              | https://finance.yahoo.com/quote/CI |
+| CINF   | Cincinnati Financial        | Financials               | Property & Casualty Insurance                    | https://finance.yahoo.com/quote/CINF |
+| CTAS   | Cintas                      | Industrials              | Diversified Support Services                     | https://finance.yahoo.com/quote/CTAS |
+| CSCO   | Cisco Systems               | Information Technology   | Communications Equipment                         | https://finance.yahoo.com/quote/CSCO |
+| C      | Citigroup                   | Financials               | Diversified Banks                                | https://finance.yahoo.com/quote/C |
+| CFG    | Citizens Financial Group    | Financials               | Regional Banks                                   | https://finance.yahoo.com/quote/CFG |
+| CLX    | Clorox                      | Consumer Staples         | Household Products                               | https://finance.yahoo.com/quote/CLX |
+| CME    | CME Group                   | Financials               | Financial Exchanges & Data                       | https://finance.yahoo.com/quote/CME |
+| CMS    | CMS Energy                  | Utilities                | Multi-Utilities                                  | https://finance.yahoo.com/quote/CMS |
+| KO     | Coca-Cola                   | Consumer Staples         | Soft Drinks                                      | https://finance.yahoo.com/quote/KO |
+| CTSH   | Cognizant Technology        | Information Technology   | IT Consulting & Other Services                   | https://finance.yahoo.com/quote/CTSH |
+| CL     | Colgate-Palmolive           | Consumer Staples         | Household Products                               | https://finance.yahoo.com/quote/CL |
+| CMCSA  | Comcast                     | Communication Services   | Cable & Satellite                                | https://finance.yahoo.com/quote/CMCSA |
+| CMA    | Comerica                    | Financials               | Regional Banks                                   | https://finance.yahoo.com/quote/CMA |
+| CAG    | Conagra Brands              | Consumer Staples         | Packaged Foods & Meats                           | https://finance.yahoo.com/quote/CAG |
+| COP    | ConocoPhillips              | Energy                   | Oil & Gas Exploration & Production               | https://finance.yahoo.com/quote/COP |
+| ED     | Consolidated Edison         | Utilities                | Multi-Utilities                                  | https://finance.yahoo.com/quote/ED |
+| STZ    | Constellation Brands        | Consumer Staples         | Distillers & Vintners                            | https://finance.yahoo.com/quote/STZ |
+| CPRT   | Copart                      | Industrials              | Diversified Support Services                     | https://finance.yahoo.com/quote/CPRT |
+| GLW    | Corning                     | Information Technology   | Electronic Components                            | https://finance.yahoo.com/quote/GLW |
+| CTVA   | Corteva                     | Materials                | Agricultural Chemicals                           | https://finance.yahoo.com/quote/CTVA |
+| COST   | Costco Wholesale            | Consumer Staples         | Hypermarkets & Super Centers                     | https://finance.yahoo.com/quote/COST |
+| CTRA   | Coterra Energy              | Energy                   | Oil & Gas Exploration & Production               | https://finance.yahoo.com/quote/CTRA |
+| CCI    | Crown Castle                | Real Estate              | Telecom Tower REITs                              | https://finance.yahoo.com/quote/CCI |
+| CSX    | CSX                         | Industrials              | Railroads                                        | https://finance.yahoo.com/quote/CSX |
+| CMG    | Chipotle Mexican Grill      | Consumer Discretionary   | Restaurants                                      | https://finance.yahoo.com/quote/CMG |
+| CVS    | CVS Health                  | Health Care              | Health Care Services                             | https://finance.yahoo.com/quote/CVS |
+| DHI    | D.R. Horton                 | Consumer Discretionary   | Homebuilding                                     | https://finance.yahoo.com/quote/DHI |
+| DHR    | Danaher                     | Health Care              | Life Sciences Tools & Services                   | https://finance.yahoo.com/quote/DHR |
+| DR Horton | DHI                      | Consumer Discretionary   | Homebuilding                                     | https://finance.yahoo.com/quote/DHI |
+| DVA    | DaVita                      | Health Care              | Health Care Services                             | https://finance.yahoo.com/quote/DVA |
+| DE     | Deere & Company             | Industrials              | Agricultural & Farm Machinery                    | https://finance.yahoo.com/quote/DE |
+| DAL    | Delta Air Lines             | Industrials              | Airlines                                         | https://finance.yahoo.com/quote/DAL |
+| XRAY   | Dentsply Sirona             | Health Care              | Health Care Supplies                             | https://finance.yahoo.com/quote/XRAY |
+| DVN    | Devon Energy                | Energy                   | Oil & Gas Exploration & Production               | https://finance.yahoo.com/quote/DVN |
+| DXCM   | Dexcom                      | Health Care              | Health Care Equipment                            | https://finance.yahoo.com/quote/DXCM |
+| FANG   | Diamondback Energy          | Energy                   | Oil & Gas Exploration & Production               | https://finance.yahoo.com/quote/FANG |
+| DLR    | Digital Realty Trust        | Real Estate              | Data Center REITs                                | https://finance.yahoo.com/quote/DLR |
+| DFS    | Discover Financial Services | Financials               | Consumer Finance                                 | https://finance.yahoo.com/quote/DFS |
+| DISH   | Dish Network                | Communication Services   | Cable & Satellite                                | https://finance.yahoo.com/quote/DISH |
+| DIS    | Walt Disney                 | Communication Services   | Movies & Entertainment                           | https://finance.yahoo.com/quote/DIS |
+| DG     | Dollar General              | Consumer Staples         | General Merchandise Stores                       | https://finance.yahoo.com/quote/DG |
+| DLTR   | Dollar Tree                 | Consumer Staples         | General Merchandise Stores                       | https://finance.yahoo.com/quote/DLTR |
+| D      | Dominion Energy             | Utilities                | Multi-Utilities                                  | https://finance.yahoo.com/quote/D |
+| DPZ    | Domino's Pizza              | Consumer Discretionary   | Restaurants                                      | https://finance.yahoo.com/quote/DPZ |
