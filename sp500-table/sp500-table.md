@@ -378,3 +378,66 @@
 | ROL    | Rollins                     | Industrials              | Environmental & Facilities Services               | https://finance.yahoo.com/quote/ROL |
 | ROP    | Roper Technologies          | Industrials              | Industrial Conglomerates                          | https://finance.yahoo.com/quote/ROP |
 | ROST   | Ross Stores                 | Consumer Discretionary   | Apparel Retail                                    | https://finance.yahoo.com/quote/ROST |
+| RSG    | Republic Services           | Industrials              | Environmental & Facilities Services               | https://finance.yahoo.com/quote/RSG |
+| RMD    | ResMed                      | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/RMD |
+| RHI    | Robert Half                 | Industrials              | HR & Employment Services                          | https://finance.yahoo.com/quote/RHI |
+| ROK    | Rockwell Automation         | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/ROK |
+| ROL    | Rollins                     | Industrials              | Environmental & Facilities Services               | https://finance.yahoo.com/quote/ROL |
+| ROP    | Roper Technologies          | Industrials              | Industrial Conglomerates                          | https://finance.yahoo.com/quote/ROP |
+| ROST   | Ross Stores                 | Consumer Discretionary   | Apparel Retail                                    | https://finance.yahoo.com/quote/ROST |
+| RCL    | Royal Caribbean Group       | Consumer Discretionary   | Hotels, Resorts & Cruise Lines                    | https://finance.yahoo.com/quote/RCL |
+| SPGI   | S&P Global                  | Financials               | Financial Exchanges & Data                        | https://finance.yahoo.com/quote/SPGI |
+| CRM    | Salesforce                  | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/CRM |
+| SBAC   | SBA Communications          | Real Estate              | Telecom Tower REITs                               | https://finance.yahoo.com/quote/SBAC |
+| SLB    | Schlumberger                | Energy                   | Oil & Gas Equipment & Services                    | https://finance.yahoo.com/quote/SLB |
+| STX    | Seagate Technology          | Information Technology   | Technology Hardware                               | https://finance.yahoo.com/quote/STX |
+| SEE    | Sealed Air                  | Materials                | Packaging Materials                               | https://finance.yahoo.com/quote/SEE |
+| SRE    | Sempra                      | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/SRE |
+| NOW    | ServiceNow                  | Information Technology   | Systems Software                                  | https://finance.yahoo.com/quote/NOW |
+| SHW    | Sherwin-Williams            | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/SHW |
+| SPG    | Simon Property Group        | Real Estate              | Retail REITs                                      | https://finance.yahoo.com/quote/SPG |
+| SWKS   | Skyworks Solutions          | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/SWKS |
+| SNA    | Snap-on                     | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/SNA |
+| SEDG   | SolarEdge Technologies      | Information Technology   | Solar Technology                                  | https://finance.yahoo.com/quote/SEDG |
+| SO     | Southern Company            | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/SO |
+| LUV    | Southwest Airlines          | Industrials              | Airlines                                         | https://finance.yahoo.com/quote/LUV |
+| SWK    | Stanley Black & Decker      | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/SWK |
+| SBUX   | Starbucks                   | Consumer Discretionary   | Restaurants                                      | https://finance.yahoo.com/quote/SBUX |
+| STT    | State Street                | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/STT |
+| STE    | Steris                      | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/STE |
+| SYK    | Stryker                     | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/SYK |
+| SIVB   | SVB Financial               | Financials               | Regional Banks                                    | https://finance.yahoo.com/quote/SIVB |
+| SYF    | Synchrony Financial         | Financials               | Consumer Finance                                  | https://finance.yahoo.com/quote/SYF |
+| SNPS   | Synopsys                    | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/SNPS |
+| SYY    | Sysco                       | Consumer Staples         | Food Distributors                                 | https://finance.yahoo.com/quote/SYY |
+| TMUS   | T-Mobile US                 | Communication Services   | Telecom Services                                  | https://finance.yahoo.com/quote/TMUS |
+| TROW   | T. Rowe Price               | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/TROW |
+| TTWO   | Take-Two Interactive        | Communication Services   | Interactive Home Entertainment                    | https://finance.yahoo.com/quote/TTWO |
+| TPX    | Tempur Sealy                | Consumer Discretionary   | Home Furnishings                                  | https://finance.yahoo.com/quote/TPX |
+| TSLA   | Tesla                       | Consumer Discretionary   | Automobile Manufacturers                          | https://finance.yahoo.com/quote/TSLA |
+| TXN    | Texas Instruments           | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/TXN |
+| TXT    | Textron                     | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/TXT |
+| TMO    | Thermo Fisher Scientific    | Health Care              | Life Sciences Tools & Services                    | https://finance.yahoo.com/quote/TMO |
+| TJX    | TJX Companies               | Consumer Discretionary   | Apparel Retail                                    | https://finance.yahoo.com/quote/TJX |
+| TSCO   | Tractor Supply              | Consumer Discretionary   | Specialty Stores                                  | https://finance.yahoo.com/quote/TSCO |
+| TT     | Trane Technologies          | Industrials              | Building Products                                 | https://finance.yahoo.com/quote/TT |
+| TDG    | TransDigm Group             | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/TDG |
+| TRV    | Travelers Companies         | Financials               | Property & Casualty Insurance                     | https://finance.yahoo.com/quote/TRV |
+| TRMB   | Trimble                     | Information Technology   | Electronic Equipment & Instruments                | https://finance.yahoo.com/quote/TRMB |
+| TFC    | Truist Financial            | Financials               | Regional Banks                                    | https://finance.yahoo.com/quote/TFC |
+| TWTR   | Twitter (pre-acquisition)   | Communication Services   | Interactive Media & Services                      | https://finance.yahoo.com/quote/TWTR |
+| TYL    | Tyler Technologies          | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/TYL |
+| TSN    | Tyson Foods                 | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/TSN |
+| USB    | U.S. Bancorp                | Financials               | Diversified Banks                                 | https://finance.yahoo.com/quote/USB |
+| UDR    | UDR                         | Real Estate              | Residential REITs                                 | https://finance.yahoo.com/quote/UDR |
+| ULTA   | Ulta Beauty                 | Consumer Discretionary   | Specialty Stores                                  | https://finance.yahoo.com/quote/ULTA |
+| UNP    | Union Pacific               | Industrials              | Railroads                                         | https://finance.yahoo.com/quote/UNP |
+| UAL    | United Airlines             | Industrials              | Airlines                                         | https://finance.yahoo.com/quote/UAL |
+| UPS    | United Parcel Service       | Industrials              | Air Freight & Logistics                           | https://finance.yahoo.com/quote/UPS |
+| URI    | United Rentals              | Industrials              | Trading Companies & Distributors                  | https://finance.yahoo.com/quote/URI |
+| UNH    | UnitedHealth Group          | Health Care              | Managed Health Care                               | https://finance.yahoo.com/quote/UNH |
+| UHS    | Universal Health Services   | Health Care              | Health Care Facilities                            | https://finance.yahoo.com/quote/UHS |
+| VLO    | Valero Energy               | Energy                   | Oil & Gas Refining & Marketing                    | https://finance.yahoo.com/quote/VLO |
+| VTR    | Ventas                      | Real Estate              | Health Care REITs                                 | https://finance.yahoo.com/quote/VTR |
+| VRSN   | VeriSign                    | Information Technology   | Internet Services & Infrastructure                | https://finance.yahoo.com/quote/VRSN |
+| VRSK   | Verisk Analytics
