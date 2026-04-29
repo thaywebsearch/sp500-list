@@ -1,0 +1,28 @@
+name: Update S&P 500 Table
+
+on:
+  workflow_dispatch:  # corre manualmente
+  schedule:
+    - cron: "0 6 * * *"  # todos os dias às 06:00
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          pip install pandas beautifulsoup4 lxml requests
+
+      - name: Run update script
+        run: python update_sp500.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Auto-update S&P 500 table" || echo "No changes"
+          git push
