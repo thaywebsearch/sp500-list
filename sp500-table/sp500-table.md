@@ -518,3 +518,58 @@
 | ZBH    | Zimmer Biomet              | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/ZBH |
 | ZION   | Zions Bancorporation        | Financials               | Regional Banks                                    | https://finance.yahoo.com/quote/ZION |
 | ZTS    | Zoetis                      | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/ZTS |
+| ZTS    | Zoetis                      | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/ZTS |
+| AOS    | A. O. Smith                 | Industrials              | Building Products                                 | https://finance.yahoo.com/quote/AOS |
+| ABBV   | AbbVie                      | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/ABBV |
+| ABMD   | ABIOMED                    | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/ABMD |
+| ACN    | Accenture                   | Information Technology   | IT Consulting & Other Services                    | https://finance.yahoo.com/quote/ACN |
+| ATVI   | Activision Blizzard         | Communication Services   | Interactive Home Entertainment                    | https://finance.yahoo.com/quote/ATVI |
+| ADM    | Archer-Daniels-Midland      | Consumer Staples         | Agricultural Products                             | https://finance.yahoo.com/quote/ADM |
+| ADP    | Automatic Data Processing   | Industrials              | Data Processing & Outsourced Services             | https://finance.yahoo.com/quote/ADP |
+| ADSK   | Autodesk                    | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/ADSK |
+| ADI    | Analog Devices              | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/ADI |
+| AEE    | Ameren                      | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/AEE |
+| AEP    | American Electric Power     | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/AEP |
+| AES    | AES Corporation             | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/AES |
+| AFL    | Aflac                       | Financials               | Life & Health Insurance                           | https://finance.yahoo.com/quote/AFL |
+| AIG    | American International Group| Financials               | Multi-line Insurance                              | https://finance.yahoo.com/quote/AIG |
+| AIZ    | Assurant                    | Financials               | Multi-line Insurance                              | https://finance.yahoo.com/quote/AIZ |
+| AJG    | Arthur J. Gallagher         | Financials               | Insurance Brokers                                 | https://finance.yahoo.com/quote/AJG |
+| AKAM   | Akamai Technologies         | Information Technology   | Internet Services & Infrastructure                | https://finance.yahoo.com/quote/AKAM |
+| ALB    | Albemarle                   | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/ALB |
+| ALGN   | Align Technology            | Health Care              | Health Care Supplies                              | https://finance.yahoo.com/quote/ALGN |
+| ALLE   | Allegion                    | Industrials              | Building Products                                 | https://finance.yahoo.com/quote/ALLE |
+| ALL    | Allstate                    | Financials               | Property & Casualty Insurance                     | https://finance.yahoo.com/quote/ALL |
+| AMCR   | Amcor                       | Materials                | Paper Packaging                                   | https://finance.yahoo.com/quote/AMCR |
+| AMD    | Advanced Micro Devices      | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/AMD |
+| AON    | Aon                         | Financials               | Insurance Brokers                                 | https://finance.yahoo.com/quote/AON |
+| APA    | APA Corporation             | Energy                   | Oil & Gas Exploration & Production                | https://finance.yahoo.com/quote/APA |
+| APD    | Air Products & Chemicals    | Materials                | Industrial Gases                                  | https://finance.yahoo.com/quote/APD |
+| ANSS   | ANSYS                       | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/ANSS |
+| APTV   | Aptiv                       | Consumer Discretionary   | Auto Parts                                        | https://finance.yahoo.com/quote/APTV |
+| ARE    | Alexandria Real Estate      | Real Estate              | Office REITs                                      | https://finance.yahoo.com/quote/ARE |
+| ATO    | Atmos Energy                | Utilities                | Gas Utilities                                     | https://finance.yahoo.com/quote/ATO |
+| AVB    | AvalonBay Communities       | Real Estate              | Residential REITs                                 | https://finance.yahoo.com/quote/AVB |
+| AVY    | Avery Dennison              | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/AVY |
+| AWK    | American Water Works        | Utilities                | Water Utilities                                   | https://finance.yahoo.com/quote/AWK |
+| AXP    | American Express            | Financials               | Consumer Finance                                  | https://finance.yahoo.com/quote/AXP |
+| AZO    | AutoZone                    | Consumer Discretionary   | Specialty Stores                                  | https://finance.yahoo.com/quote/AZO |
+| BA     | Boeing                      | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/BA |
+| BAC    | Bank of America             | Financials               | Diversified Banks                                 | https://finance.yahoo.com/quote/BAC |
+| BAX    | Baxter International        | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/BAX |
+| BBY    | Best Buy                    | Consumer Discretionary   | Computer & Electronics Retail                     | https://finance.yahoo.com/quote/BBY |
+| BDX    | Becton Dickinson            | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/BDX |
+| BEN    | Franklin Resources          | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/BEN |
+| BF.B   | Brown-Forman (Class B)      | Consumer Staples         | Distillers & Vintners                             | https://finance.yahoo.com/quote/BF.B |
+| BIIB   | Biogen                      | Health Care              | Biotechnology                                     | https://finance.yahoo.com/quote/BIIB |
+| BK     | Bank of New York Mellon     | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/BK |
+| BKNG   | Booking Holdings            | Consumer Discretionary   | Hotels, Resorts & Cruise Lines                    | https://finance.yahoo.com/quote/BKNG |
+| BKR    | Baker Hughes                | Energy                   | Oil & Gas Equipment & Services                    | https://finance.yahoo.com/quote/BKR |
+| BLK    | BlackRock                   | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/BLK |
+| BLL    | Ball Corporation            | Materials                | Metal & Glass Containers                          | https://finance.yahoo.com/quote/BLL |
+| BMY    | Bristol-Myers Squibb        | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/BMY |
+| BR     | Broadridge Financial        | Financials               | Data Processing & Outsourced Services             | https://finance.yahoo.com/quote/BR |
+| BRK.B  | Berkshire Hathaway (B)      | Financials               | Multi-Sector Holdings                             | https://finance.yahoo.com/quote/BRK.B |
+| BSX    | Boston Scientific           | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/BSX |
+| BWA    | BorgWarner                  | Consumer Discretionary   | Auto Parts                                        | https://finance.yahoo.com/quote/BWA |
+| BXP    | Boston Properties
