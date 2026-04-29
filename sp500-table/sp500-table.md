@@ -1,6 +1,6 @@
 # S&P 500 — Tabela Completa
 
-https://thaywebsearch.github.io/sp500-list/sp500-table
+https://thaywebsearch.github.io/sp500-list/tables/sp500-table
 
 | Symbol | Security                    | GICS Sector             | GICS Sub-Industry                               | Yahoo Finance |
 |--------|------------------------------|--------------------------|--------------------------------------------------|----------------|
