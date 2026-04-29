@@ -342,3 +342,39 @@
 | PYPL   | PayPal                      | Financials               | Transaction & Payment Processing                  | https://finance.yahoo.com/quote/PYPL |
 | PNR    | Pentair                     | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/PNR |
 | PEP    | PepsiCo                     | Consumer Staples         | Soft Drinks                                       | https://finance.yahoo.com/quote/PEP |
+| PFE    | Pfizer                      | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/PFE |
+| PCG    | PG&E                        | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/PCG |
+| PM     | Philip Morris International | Consumer Staples         | Tobacco                                           | https://finance.yahoo.com/quote/PM |
+| PSX    | Phillips 66                 | Energy                   | Oil & Gas Refining & Marketing                    | https://finance.yahoo.com/quote/PSX |
+| PNW    | Pinnacle West Capital       | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/PNW |
+| PXD    | Pioneer Natural Resources   | Energy                   | Oil & Gas Exploration & Production                | https://finance.yahoo.com/quote/PXD |
+| PNC    | PNC Financial Services      | Financials               | Diversified Banks                                 | https://finance.yahoo.com/quote/PNC |
+| POOL   | Pool Corporation            | Industrials              | Trading Companies & Distributors                  | https://finance.yahoo.com/quote/POOL |
+| PPG    | PPG Industries              | Materials                | Specialty Chemicals                               | https://finance.yahoo.com/quote/PPG |
+| PPL    | PPL Corporation             | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/PPL |
+| PFG    | Principal Financial Group   | Financials               | Life & Health Insurance                           | https://finance.yahoo.com/quote/PFG |
+| PG     | Procter & Gamble            | Consumer Staples         | Household Products                                | https://finance.yahoo.com/quote/PG |
+| PGR    | Progressive                 | Financials               | Property & Casualty Insurance                     | https://finance.yahoo.com/quote/PGR |
+| PLD    | Prologis                    | Real Estate              | Industrial REITs                                  | https://finance.yahoo.com/quote/PLD |
+| PRU    | Prudential Financial        | Financials               | Life & Health Insurance                           | https://finance.yahoo.com/quote/PRU |
+| PEG    | Public Service Enterprise   | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/PEG |
+| PSA    | Public Storage              | Real Estate              | Self-Storage REITs                                | https://finance.yahoo.com/quote/PSA |
+| PHM    | PulteGroup                  | Consumer Discretionary   | Homebuilding                                      | https://finance.yahoo.com/quote/PHM |
+| QRVO   | Qorvo                       | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/QRVO |
+| QCOM   | Qualcomm                    | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/QCOM |
+| PWR    | Quanta Services             | Industrials              | Construction & Engineering                        | https://finance.yahoo.com/quote/PWR |
+| DGX    | Quest Diagnostics           | Health Care              | Health Care Services                              | https://finance.yahoo.com/quote/DGX |
+| RL     | Ralph Lauren                | Consumer Discretionary   | Apparel, Accessories & Luxury Goods               | https://finance.yahoo.com/quote/RL |
+| RJF    | Raymond James               | Financials               | Investment Banking & Brokerage                    | https://finance.yahoo.com/quote/RJF |
+| RTX    | RTX Corporation             | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/RTX |
+| O      | Realty Income               | Real Estate              | Retail REITs                                      | https://finance.yahoo.com/quote/O |
+| REG    | Regency Centers             | Real Estate              | Retail REITs                                      | https://finance.yahoo.com/quote/REG |
+| REGN   | Regeneron Pharmaceuticals   | Health Care              | Biotechnology                                     | https://finance.yahoo.com/quote/REGN |
+| RF     | Regions Financial           | Financials               | Regional Banks                                    | https://finance.yahoo.com/quote/RF |
+| RSG    | Republic Services           | Industrials              | Environmental & Facilities Services               | https://finance.yahoo.com/quote/RSG |
+| RMD    | ResMed                      | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/RMD |
+| RHI    | Robert Half                 | Industrials              | HR & Employment Services                          | https://finance.yahoo.com/quote/RHI |
+| ROK    | Rockwell Automation         | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/ROK |
+| ROL    | Rollins                     | Industrials              | Environmental & Facilities Services               | https://finance.yahoo.com/quote/ROL |
+| ROP    | Roper Technologies          | Industrials              | Industrial Conglomerates                          | https://finance.yahoo.com/quote/ROP |
+| ROST   | Ross Stores                 | Consumer Discretionary   | Apparel Retail                                    | https://finance.yahoo.com/quote/ROST |
