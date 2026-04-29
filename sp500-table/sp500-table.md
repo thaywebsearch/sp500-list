@@ -289,3 +289,56 @@
 | MSFT   | Microsoft                   | Information Technology   | Systems Software                                   | https://finance.yahoo.com/quote/MSFT |
 | MAA    | Mid-America Apartment Comm. | Real Estate              | Residential REITs                                  | https://finance.yahoo.com/quote/MAA |
 | MRNA   | Moderna                     | Health Care              | Biotechnology                                      | https://finance.yahoo.com/quote/MRNA |
+| MRVL   | Marvell Technology          | Information Technology   | Semiconductors                                   | https://finance.yahoo.com/quote/MRVL |
+| MASI   | Masimo                      | Health Care              | Health Care Equipment                             | https://finance.yahoo.com/quote/MASI |
+| MSA    | MSA Safety                  | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/MSA |
+| MHK    | Mohawk Industries           | Consumer Discretionary   | Home Furnishings                                  | https://finance.yahoo.com/quote/MHK |
+| TAP    | Molson Coors Beverage       | Consumer Staples         | Brewers                                           | https://finance.yahoo.com/quote/TAP |
+| MDLZ   | Mondelez International      | Consumer Staples         | Packaged Foods & Meats                            | https://finance.yahoo.com/quote/MDLZ |
+| MPWR   | Monolithic Power Systems    | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/MPWR |
+| MNST   | Monster Beverage            | Consumer Staples         | Soft Drinks                                       | https://finance.yahoo.com/quote/MNST |
+| MCO    | Moody's                     | Financials               | Financial Exchanges & Data                        | https://finance.yahoo.com/quote/MCO |
+| MS     | Morgan Stanley              | Financials               | Investment Banking & Brokerage                    | https://finance.yahoo.com/quote/MS |
+| MOS    | Mosaic                      | Materials                | Fertilizers & Agricultural Chemicals              | https://finance.yahoo.com/quote/MOS |
+| MSI    | Motorola Solutions          | Information Technology   | Communications Equipment                          | https://finance.yahoo.com/quote/MSI |
+| MSCI   | MSCI                        | Financials               | Financial Exchanges & Data                        | https://finance.yahoo.com/quote/MSCI |
+| NDAQ   | Nasdaq                      | Financials               | Financial Exchanges & Data                        | https://finance.yahoo.com/quote/NDAQ |
+| NTAP   | NetApp                      | Information Technology   | Technology Hardware                               | https://finance.yahoo.com/quote/NTAP |
+| NFLX   | Netflix                     | Communication Services   | Movies & Entertainment                            | https://finance.yahoo.com/quote/NFLX |
+| NWL    | Newell Brands               | Consumer Discretionary   | Housewares & Specialties                          | https://finance.yahoo.com/quote/NWL |
+| NEM    | Newmont                     | Materials                | Gold                                              | https://finance.yahoo.com/quote/NEM |
+| NWSA   | News Corp (A)               | Communication Services   | Publishing                                        | https://finance.yahoo.com/quote/NWSA |
+| NWS    | News Corp (B)               | Communication Services   | Publishing                                        | https://finance.yahoo.com/quote/NWS |
+| NEE    | NextEra Energy              | Utilities                | Electric Utilities                                | https://finance.yahoo.com/quote/NEE |
+| NKE    | Nike                        | Consumer Discretionary   | Apparel, Accessories & Luxury Goods               | https://finance.yahoo.com/quote/NKE |
+| NI     | NiSource                    | Utilities                | Multi-Utilities                                   | https://finance.yahoo.com/quote/NI |
+| NDSN   | Nordson                     | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/NDSN |
+| NSC    | Norfolk Southern            | Industrials              | Railroads                                         | https://finance.yahoo.com/quote/NSC |
+| NTRS   | Northern Trust              | Financials               | Asset Management                                  | https://finance.yahoo.com/quote/NTRS |
+| NOC    | Northrop Grumman           | Industrials              | Aerospace & Defense                               | https://finance.yahoo.com/quote/NOC |
+| NCLH   | Norwegian Cruise Line       | Consumer Discretionary   | Hotels, Resorts & Cruise Lines                    | https://finance.yahoo.com/quote/NCLH |
+| NUE    | Nucor                       | Materials                | Steel                                             | https://finance.yahoo.com/quote/NUE |
+| NVDA   | NVIDIA                      | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/NVDA |
+| NVR    | NVR                         | Consumer Discretionary   | Homebuilding                                      | https://finance.yahoo.com/quote/NVR |
+| NXPI   | NXP Semiconductors          | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/NXPI |
+| ORLY   | O'Reilly Automotive         | Consumer Discretionary   | Automotive Retail                                 | https://finance.yahoo.com/quote/ORLY |
+| OXY    | Occidental Petroleum        | Energy                   | Oil & Gas Exploration & Production                | https://finance.yahoo.com/quote/OXY |
+| ODFL   | Old Dominion Freight Line   | Industrials              | Trucking                                          | https://finance.yahoo.com/quote/ODFL |
+| OMC    | Omnicom Group               | Communication Services   | Advertising                                       | https://finance.yahoo.com/quote/OMC |
+| ON     | ON Semiconductor            | Information Technology   | Semiconductors                                    | https://finance.yahoo.com/quote/ON |
+| OGN    | Organon                     | Health Care              | Pharmaceuticals                                   | https://finance.yahoo.com/quote/OGN |
+| ORCL   | Oracle                      | Information Technology   | Systems Software                                  | https://finance.yahoo.com/quote/ORCL |
+| ODFL   | Old Dominion Freight Line   | Industrials              | Trucking                                          | https://finance.yahoo.com/quote/ODFL |
+| OKE    | ONEOK                       | Energy                   | Oil & Gas Storage & Transportation                | https://finance.yahoo.com/quote/OKE |
+| OTIS   | Otis Worldwide              | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/OTIS |
+| PCAR   | PACCAR                      | Industrials              | Construction Machinery & Heavy Trucks             | https://finance.yahoo.com/quote/PCAR |
+| PKG    | Packaging Corporation       | Materials                | Paper Packaging                                   | https://finance.yahoo.com/quote/PKG |
+| PANW   | Palo Alto Networks          | Information Technology   | Systems Software                                  | https://finance.yahoo.com/quote/PANW |
+| PARAA  | Paramount Global (A)        | Communication Services   | Movies & Entertainment                            | https://finance.yahoo.com/quote/PARAA |
+| PARA   | Paramount Global (B)        | Communication Services   | Movies & Entertainment                            | https://finance.yahoo.com/quote/PARA |
+| PH     | Parker-Hannifin             | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/PH |
+| PAYX   | Paychex                     | Industrials              | HR & Employment Services                          | https://finance.yahoo.com/quote/PAYX |
+| PAYC   | Paycom Software             | Information Technology   | Application Software                              | https://finance.yahoo.com/quote/PAYC |
+| PYPL   | PayPal                      | Financials               | Transaction & Payment Processing                  | https://finance.yahoo.com/quote/PYPL |
+| PNR    | Pentair                     | Industrials              | Industrial Machinery                              | https://finance.yahoo.com/quote/PNR |
+| PEP    | PepsiCo                     | Consumer Staples         | Soft Drinks                                       | https://finance.yahoo.com/quote/PEP |
