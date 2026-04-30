@@ -1,16 +1,24 @@
-name: Update S&P 500 Table
+name: Update S&P 500 Table (Improved)
 
 on:
-  workflow_dispatch:  # corre manualmente
+  workflow_dispatch: # Permite execução manual
   schedule:
-    - cron: "0 6 * * *"  # todos os dias às 06:00
+    - cron: "0 6 * * *" # Todos os dias às 06:00 UTC
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Concede permissão de escrita para o GITHUB_TOKEN
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
@@ -22,7 +30,11 @@ jobs:
       - name: Commit changes
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add .
+          git config user.email "github-actions@github.com"
+          git add sp500-table/sp500-table.md # Adiciona explicitamente o ficheiro a ser atualizado
           git commit -m "Auto-update S&P 500 table" || echo "No changes"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Garante que o token é usado para autenticação
+
+   
