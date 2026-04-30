@@ -1,14 +1,14 @@
 import pandas as pd
 
-# URL estável do DataHub.io (S&P 500 constituents)
-URL = "https://datahub.io/core/s-and-p-500-companies/r/data/constituents.csv"
+# URL estável - raw CSV do GitHub (sem parsing HTML, sem dependências extra)
+URL = "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/main/data/constituents.csv"
 
 # Caminho onde o ficheiro será guardado no repositório
 CSV_PATH = "sp500-table/sp500-table.csv"
 MD_PATH = "sp500-table/sp500-table.md"
 
 def fetch_sp500():
-    """Descarrega a lista do S&P 500 a partir do DataHub.io."""
+    """Descarrega a lista do S&P 500 a partir do GitHub."""
     df = pd.read_csv(URL)
     return df
 
