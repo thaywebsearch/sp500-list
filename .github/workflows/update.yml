@@ -3,14 +3,12 @@ name: Update S&P 500 Table
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * 1"  # Atualiza todas as segundas às 06:00 UTC
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,21 +16,28 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
-          pip install pandas beautifulsoup4 lxml requests
+          pip install pandas
 
       - name: Run update script
         run: python update_sp500.py
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add sp500-table/sp500-table.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update S&P 500 table [skip ci]" && git push)
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Update S&P 500 table" || echo "No changes to commit"
 
-     
-         
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+ 
+
+    
+  
