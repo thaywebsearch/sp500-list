@@ -1,16 +1,25 @@
 name: Update S&P 500 Table
 
 on:
-  workflow_dispatch:  # corre manualmente
+  workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"  # todos os dias às 06:00
+    - cron: "0 6 * * *"
 
 jobs:
   update:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+    
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
@@ -19,12 +28,12 @@ jobs:
       - name: Run update script
         run: python update_sp500.py
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Auto-update S&P 500 table" || echo "No changes"
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sp500-table/sp500-table.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update S&P 500 table [skip ci]" && git push)
 
+     
  
