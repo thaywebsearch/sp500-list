@@ -10,9 +10,12 @@ FILE_PATH = "sp500-table/sp500-table.md"
 
 def fetch_sp500():
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
     try:
         logging.info(f"A tentar obter dados de: {url}")
-        html = requests.get(url, timeout=10).text # Adicionado timeout
+        html = requests.get(url, headers=headers, timeout=10).text # Adicionado timeout e headers
         soup = BeautifulSoup(html, "html.parser")
         table = soup.find("table", {"id": "constituents"})
         if not table:
@@ -89,6 +92,11 @@ if __name__ == "__main__":
         logging.critical(f"O script falhou: {e}")
         exit(1)
 
-   
+    
+
+     
+    
+
+
 
   
