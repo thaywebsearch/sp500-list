@@ -1,6 +1,14 @@
-
 # S&P 500 Dataset (CSV)
 ![Release](https://img.shields.io/badge/release-v1.0-0A66C2?style=flat-square)
+
+## 🔍 S&P 500 Search Tool (Streamlit)
+
+Consulta e pesquisa empresas do S&P 500 diretamente no browser.
+
+👉 **Aceder à aplicação:**  
+https://sp500-list-xka9pvwncim3p3cfum69ki.streamlit.app/
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://teu-nome.streamlit.app)
 
 ## 📌 Pré‑visualização do dataset
 A tabela abaixo mostra apenas as primeiras linhas do dataset para facilitar a leitura.  
