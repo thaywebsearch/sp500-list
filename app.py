@@ -8,7 +8,8 @@
 
 import streamlit as st
 import pandas as pd
-from img_to_base64 import img_to_base64, get_mime_type
+import base64
+from pathlib import Path
 
 # ── Page config ───────────────────────────────────────────────────
 st.set_page_config(
@@ -18,7 +19,16 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# ── Logo Base64 ───────────────────────────────────────────────────
+# ── Logo Base64 (inline — sem dependência externa) ────────────────
+def img_to_base64(path: str) -> str:
+    return base64.b64encode(Path(path).read_bytes()).decode("utf-8")
+
+def get_mime_type(path: str) -> str:
+    ext = Path(path).suffix.lower()
+    return {"png": "image/png", "jpg": "image/jpeg",
+            "jpeg": "image/jpeg", "webp": "image/webp",
+            "gif": "image/gif", "svg": "image/svg+xml"}.get(ext.strip("."), "image/png")
+
 logo_b64  = img_to_base64("logo.png")
 logo_mime = get_mime_type("logo.png")
 
