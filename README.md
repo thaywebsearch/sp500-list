@@ -13,7 +13,7 @@ Explore todas as 500 empresas do índice S&P 500, com dados de mercado, sector e
 Consulta e pesquisa empresas do S&P 500 diretamente no browser.
 
 👉 **Aceder à aplicação:**  
-https://sp500-list-xka9pvwncim3p3cfum69ki.streamlit.app/
+https://sp500-search.streamlit.app/
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://teu-nome.streamlit.app)
 
