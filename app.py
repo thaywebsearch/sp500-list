@@ -8,18 +8,26 @@
 
 import streamlit as st
 import pandas as pd
+import base64
+from pathlib import Path
 
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  PAGE CONFIG — tem de ser a primeira chamada Streamlit
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 st.set_page_config(
     page_title="S&P 500 Dashboard — Lista Completa",
     page_icon="📈",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed",
 )
-st.header("S&P 500 — Lista Completa de Empresas")
-st.text("Explore todas as 500 empresas do índice S&P 500,
-com dados de mercado, sector e capitalização.")
-# ── Page config ───────────────────────────────────────────────────
 
-# ── Logo Base64 (inline — sem dependência externa) ────────────────
+st.header("S&P 500 — Lista Completa de Empresas")
+st.text("Explore todas as 500 empresas do índice S&P 500, "
+        "com dados de mercado, sector e capitalização.")
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  LOGO BASE64 — conversão inline
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 def img_to_base64(path: str) -> str:
     return base64.b64encode(Path(path).read_bytes()).decode("utf-8")
 
@@ -427,10 +435,10 @@ with col4:
 
 # Filter
 result = df.copy()
-if name_q:     result = search_company(result, name_q)
-if ticker_q:   result = search_ticker(result, ticker_q)
-if sector_q != "All": result = search_sector(result, sector_q)
-if do_sort:    result = sort_alpha(result)
+if name_q:             result = search_company(result, name_q)
+if ticker_q:           result = search_ticker(result, ticker_q)
+if sector_q != "All":  result = search_sector(result, sector_q)
+if do_sort:            result = sort_alpha(result)
 
 # Results
 st.markdown(f"""
