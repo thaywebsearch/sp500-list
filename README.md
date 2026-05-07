@@ -1,4 +1,11 @@
 # S&P 500 Dataset (CSV)
+
+# 📈 S&P 500 Dashboard
+
+Explore todas as 500 empresas do índice S&P 500, com dados de mercado, sector e capitalização.
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sp500-dashboard.streamlit.app)
+
 ![Release](https://img.shields.io/badge/release-v1.0-0A66C2?style=flat-square)
 
 ## 🔍 S&P 500 Search Tool (Streamlit)
