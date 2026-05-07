@@ -8,9 +8,15 @@
 
 import streamlit as st
 import pandas as pd
-import base64
-from pathlib import Path
 
+st.set_page_config(
+    page_title="S&P 500 Dashboard — Lista Completa",
+    page_icon="📈",
+    layout="wide"
+)
+st.header("S&P 500 — Lista Completa de Empresas")
+st.text("Explore todas as 500 empresas do índice S&P 500,
+com dados de mercado, sector e capitalização.")
 # ── Page config ───────────────────────────────────────────────────
 st.set_page_config(
     page_title="S&P 500 Search Tool",
