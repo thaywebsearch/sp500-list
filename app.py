@@ -3,6 +3,7 @@
 ║         S&P 500 Search Tool · app.py                            ║
 ║         Branding: Logo animado + Search Tool integrados         ║
 ║         Técnica: CSS Injection + Base64 Image + Streamlit       ║
+║         Estrutura 2: Price column via yfinance                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
 
@@ -26,7 +27,7 @@ st.text("Explore todas as 500 empresas do índice S&P 500, "
         "com dados de mercado, sector e capitalização.")
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-#  LOGO BASE64 — conversão inline
+#  LOGO BASE64
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 def img_to_base64(path: str) -> str:
     return base64.b64encode(Path(path).read_bytes()).decode("utf-8")
@@ -39,6 +40,56 @@ def get_mime_type(path: str) -> str:
 
 logo_b64  = img_to_base64("logo.png")
 logo_mime = get_mime_type("logo.png")
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  PREÇOS VIA YFINANCE
+#  - ttl=3600 → cache de 1 hora (não sobrecarrega a API)
+#  - batch de 100 tickers por chamada → muito mais rápido
+#  - fallback "N/A" se o ticker falhar
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+@st.cache_data(ttl=3600, show_spinner=False)
+def fetch_prices(tickers: tuple) -> dict:
+    """
+    Recebe uma tuple de tickers e devolve um dict {ticker: preço}.
+    Usa yf.download em batch para ser mais rápido do que
+    chamar yf.Ticker() individualmente para cada empresa.
+    """
+    import yfinance as yf
+
+    prices = {}
+    # Processa em batches de 100 para evitar timeouts
+    batch_size = 100
+    ticker_list = list(tickers)
+
+    for i in range(0, len(ticker_list), batch_size):
+        batch = ticker_list[i : i + batch_size]
+        try:
+            # download de 1 dia — só queremos o último preço de fecho
+            data = yf.download(
+                tickers  = batch,
+                period   = "1d",
+                interval = "1d",
+                progress = False,
+                auto_adjust = True,
+            )
+            # estrutura: data["Close"] é um DataFrame com colunas = tickers
+            if "Close" in data.columns.get_level_values(0) if hasattr(data.columns, "get_level_values") else []:
+                close = data["Close"]
+            else:
+                close = data  # se só 1 ticker, yfinance devolve df simples
+
+            for ticker in batch:
+                try:
+                    val = close[ticker].dropna().iloc[-1] if ticker in close.columns else None
+                    prices[ticker] = round(float(val), 2) if val is not None else "N/A"
+                except Exception:
+                    prices[ticker] = "N/A"
+        except Exception:
+            for ticker in batch:
+                prices[ticker] = "N/A"
+
+    return prices
+
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #  CSS GLOBAL
@@ -114,7 +165,6 @@ html, body, [data-testid="stAppViewContainer"] {
   50%      { opacity:1;  transform: translate(-50%,-50%) scale(1.15); }
 }
 
-/* ── logo ring ── */
 .sp-logo-wrap {
   position: relative;
   width: 80px; height: 80px;
@@ -190,7 +240,6 @@ html, body, [data-testid="stAppViewContainer"] {
   }
 }
 
-/* ── title block ── */
 .sp-title-block { display: flex; flex-direction: column; gap: 4px; }
 
 .sp-eyebrow {
@@ -267,6 +316,24 @@ html, body, [data-testid="stAppViewContainer"] {
   text-transform: uppercase; color: var(--muted); margin-top: 4px;
 }
 
+/* ── PRICE BADGE na tabela ── */
+.price-tag {
+  display: inline-block;
+  background: rgba(0,230,118,.08);
+  color: #00e676;
+  border: 1px solid rgba(0,230,118,.25);
+  border-radius: 4px;
+  padding: 1px 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: .05em;
+}
+
+.price-na {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 /* ── SEARCH ── */
 .search-label {
   font-size: 10px; letter-spacing: .25em;
@@ -322,6 +389,23 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 .stDownloadButton > button:hover { border-color: var(--accent) !important; }
 
+/* ── INFO PRICE ── */
+.price-info {
+  font-size: 11px; letter-spacing: .12em;
+  color: var(--muted); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.price-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green);
+  display: inline-block;
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%,100% { opacity:1; }
+  50%      { opacity:.3; }
+}
+
 .sp-footer {
   text-align: center; font-size: 10px; letter-spacing: .2em;
   text-transform: uppercase; color: var(--muted);
@@ -354,7 +438,7 @@ HEADER = f"""
     <div class="sp-pills">
       <span class="sp-pill">503 Empresas</span>
       <span class="sp-pill">11 Setores</span>
-      <span class="sp-pill">Live Data</span>
+      <span class="sp-pill">Live Price</span>
       <span class="sp-pill">CSV Export</span>
     </div>
   </div>
@@ -363,7 +447,7 @@ HEADER = f"""
 """
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-#  DATA
+#  DATA — carrega o CSV do S&P 500
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 URL = "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/main/data/constituents.csv"
 
@@ -392,10 +476,25 @@ def sort_alpha(df):
 st.markdown(CSS,    unsafe_allow_html=True)
 st.markdown(HEADER, unsafe_allow_html=True)
 
+# ── 1. Carrega o CSV ──────────────────────────────────────────────
 with st.spinner("A carregar dados do S&P 500..."):
     df = load_data()
 
-# Metrics
+# ── 2. Carrega os preços via yfinance ─────────────────────────────
+#    Mostra um spinner específico para o utilizador perceber
+#    que está a ir buscar preços em tempo real
+with st.spinner("A obter cotações em tempo real... ⏳  (cache de 1h)"):
+    tickers_tuple = tuple(df["Symbol"].tolist())   # tuple → é hashable para o cache
+    prices        = fetch_prices(tickers_tuple)
+
+# ── 3. Adiciona a coluna Price ao DataFrame ───────────────────────
+#    map() aplica o dict de preços a cada Symbol
+df["Price (USD)"] = df["Symbol"].map(prices)
+
+# ── Metrics ───────────────────────────────────────────────────────
+valid_prices  = [v for v in prices.values() if v != "N/A"]
+avg_price     = round(sum(valid_prices) / len(valid_prices), 2) if valid_prices else 0
+
 st.markdown(f"""
 <div class="metric-row">
   <div class="metric-card">
@@ -407,17 +506,17 @@ st.markdown(f"""
     <div class="metric-label">Setores</div>
   </div>
   <div class="metric-card">
-    <div class="metric-value">{df["Symbol"].nunique()}</div>
-    <div class="metric-label">Tickers</div>
+    <div class="metric-value">{len(valid_prices)}</div>
+    <div class="metric-label">Preços obtidos</div>
   </div>
   <div class="metric-card">
-    <div class="metric-value">AUTO</div>
-    <div class="metric-label">Atualização</div>
+    <div class="metric-value">${avg_price}</div>
+    <div class="metric-label">Preço médio</div>
   </div>
 </div>
 """, unsafe_allow_html=True)
 
-# Search
+# ── Search ────────────────────────────────────────────────────────
 st.markdown('<p class="search-label">⬡ &nbsp; Filtros de pesquisa</p>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([2, 1, 2])
@@ -433,14 +532,14 @@ col4, _ = st.columns([1, 5])
 with col4:
     do_sort = st.checkbox("Ordenar A→Z")
 
-# Filter
+# ── Filter ────────────────────────────────────────────────────────
 result = df.copy()
 if name_q:             result = search_company(result, name_q)
 if ticker_q:           result = search_ticker(result, ticker_q)
 if sector_q != "All":  result = search_sector(result, sector_q)
 if do_sort:            result = sort_alpha(result)
 
-# Results
+# ── Results ───────────────────────────────────────────────────────
 st.markdown(f"""
 <p class="results-label">
   ⬡ &nbsp; Resultados &nbsp;
@@ -449,21 +548,37 @@ st.markdown(f"""
 </p>
 """, unsafe_allow_html=True)
 
+# Indicador de frescura dos dados
+st.markdown("""
+<p class="price-info">
+  <span class="price-dot"></span>
+  Cotações em tempo real · Actualização automática a cada hora
+</p>
+""", unsafe_allow_html=True)
+
 if len(result) == 0:
     st.warning("Nenhuma empresa encontrada. Tenta outro critério.")
 else:
-    st.dataframe(result.reset_index(drop=True), use_container_width=True, height=480)
+    # Reordena colunas para Price aparecer logo após Symbol e Security
+    cols = ["Symbol", "Security", "Price (USD)", "GICS Sector",
+            "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
+    cols_available = [c for c in cols if c in result.columns]
+    result_display = result[cols_available].reset_index(drop=True)
+
+    st.dataframe(result_display, use_container_width=True, height=480)
+
     st.download_button(
         label="⬇️  Exportar resultados CSV",
-        data=result.to_csv(index=False).encode("utf-8"),
+        data=result_display.to_csv(index=False).encode("utf-8"),
         file_name="sp500_results.csv",
         mime="text/csv"
     )
 
-# Footer
+# ── Footer ────────────────────────────────────────────────────────
 st.markdown("""
 <div class="sp-footer">
   ⬡ &nbsp; Dados: GitHub datasets/s-and-p-500-companies &nbsp;·&nbsp;
-  Atualizado automaticamente via GitHub Actions &nbsp; ⬡
+  Cotações: Yahoo Finance via yfinance &nbsp;·&nbsp;
+  Actualizado automaticamente via GitHub Actions &nbsp; ⬡
 </div>
 """, unsafe_allow_html=True)
