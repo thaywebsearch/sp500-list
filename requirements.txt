@@ -1,3 +1,2 @@
-streamlit
-pandas
-tabulate
+-e streamlit>=1.35.0
+yfinance>=0.2.40
