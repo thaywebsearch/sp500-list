@@ -48,35 +48,39 @@ logo_mime = get_mime_type("logo.png")
 #  - fallback "N/A" se o ticker falhar
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 @st.cache_data(ttl=3600, show_spinner=False)
-def fetch_prices(tickers: tuple) -> dict:
+def fetch_market_data(tickers: tuple) -> tuple[dict, dict]:
     """
-    Recebe uma tuple de tickers e devolve um dict {ticker: preço}.
-    Usa yf.download em batch para ser mais rápido do que
-    chamar yf.Ticker() individualmente para cada empresa.
+    Recebe uma tuple de tickers e devolve dois dicts:
+      - prices     : {ticker: preço em USD}
+      - market_caps: {ticker: market cap formatado em B/T}
+
+    Estratégia:
+      - Price      → yf.download() em batch de 100 (rápido)
+      - Market Cap → yf.Ticker().fast_info (por ticker, mas em cache)
     """
     import yfinance as yf
 
-    prices = {}
-    # Processa em batches de 100 para evitar timeouts
-    batch_size = 100
+    prices      = {}
+    market_caps = {}
+    batch_size  = 100
     ticker_list = list(tickers)
 
+    # ── PRICE — batch download ────────────────────────────────────
     for i in range(0, len(ticker_list), batch_size):
         batch = ticker_list[i : i + batch_size]
         try:
-            # download de 1 dia — só queremos o último preço de fecho
             data = yf.download(
-                tickers  = batch,
-                period   = "1d",
-                interval = "1d",
-                progress = False,
+                tickers     = batch,
+                period      = "1d",
+                interval    = "1d",
+                progress    = False,
                 auto_adjust = True,
             )
-            # estrutura: data["Close"] é um DataFrame com colunas = tickers
-            if "Close" in data.columns.get_level_values(0) if hasattr(data.columns, "get_level_values") else []:
+            if hasattr(data.columns, "get_level_values") and \
+               "Close" in data.columns.get_level_values(0):
                 close = data["Close"]
             else:
-                close = data  # se só 1 ticker, yfinance devolve df simples
+                close = data
 
             for ticker in batch:
                 try:
@@ -88,7 +92,24 @@ def fetch_prices(tickers: tuple) -> dict:
             for ticker in batch:
                 prices[ticker] = "N/A"
 
-    return prices
+    # ── MARKET CAP — fast_info por ticker ────────────────────────
+    #    fast_info é leve e não faz download de histórico
+    for ticker in ticker_list:
+        try:
+            info = yf.Ticker(ticker).fast_info
+            cap  = info.market_cap          # valor em USD absoluto
+            if cap is None:
+                market_caps[ticker] = "N/A"
+            elif cap >= 1_000_000_000_000:  # Triliões
+                market_caps[ticker] = f"${cap / 1_000_000_000_000:.2f}T"
+            elif cap >= 1_000_000_000:      # Biliões
+                market_caps[ticker] = f"${cap / 1_000_000_000:.2f}B"
+            else:                           # Milhões
+                market_caps[ticker] = f"${cap / 1_000_000:.0f}M"
+        except Exception:
+            market_caps[ticker] = "N/A"
+
+    return prices, market_caps
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -480,19 +501,18 @@ st.markdown(HEADER, unsafe_allow_html=True)
 with st.spinner("A carregar dados do S&P 500..."):
     df = load_data()
 
-# ── 2. Carrega os preços via yfinance ─────────────────────────────
-#    Mostra um spinner específico para o utilizador perceber
-#    que está a ir buscar preços em tempo real
-with st.spinner("A obter cotações em tempo real... ⏳  (cache de 1h)"):
-    tickers_tuple = tuple(df["Symbol"].tolist())   # tuple → é hashable para o cache
-    prices        = fetch_prices(tickers_tuple)
+# ── 2. Carrega preços e market caps via yfinance ──────────────────
+with st.spinner("A obter cotações e market caps em tempo real... ⏳  (cache de 1h)"):
+    tickers_tuple        = tuple(df["Symbol"].tolist())
+    prices, market_caps  = fetch_market_data(tickers_tuple)
 
-# ── 3. Adiciona a coluna Price ao DataFrame ───────────────────────
-#    map() aplica o dict de preços a cada Symbol
-df["Price (USD)"] = df["Symbol"].map(prices)
+# ── 3. Adiciona colunas ao DataFrame ──────────────────────────────
+df["Price (USD)"]  = df["Symbol"].map(prices)
+df["Market Cap"]   = df["Symbol"].map(market_caps)
 
 # ── Metrics ───────────────────────────────────────────────────────
 valid_prices  = [v for v in prices.values() if v != "N/A"]
+valid_caps    = [v for v in market_caps.values() if v != "N/A"]
 avg_price     = round(sum(valid_prices) / len(valid_prices), 2) if valid_prices else 0
 
 st.markdown(f"""
@@ -508,6 +528,10 @@ st.markdown(f"""
   <div class="metric-card">
     <div class="metric-value">{len(valid_prices)}</div>
     <div class="metric-label">Preços obtidos</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">{len(valid_caps)}</div>
+    <div class="metric-label">Market Caps</div>
   </div>
   <div class="metric-card">
     <div class="metric-value">${avg_price}</div>
@@ -552,15 +576,15 @@ st.markdown(f"""
 st.markdown("""
 <p class="price-info">
   <span class="price-dot"></span>
-  Cotações em tempo real · Actualização automática a cada hora
+  Cotações e Market Caps em tempo real · Actualização automática a cada hora
 </p>
 """, unsafe_allow_html=True)
 
 if len(result) == 0:
     st.warning("Nenhuma empresa encontrada. Tenta outro critério.")
 else:
-    # Reordena colunas para Price aparecer logo após Symbol e Security
-    cols = ["Symbol", "Security", "Price (USD)", "GICS Sector",
+    # Reordena colunas — Price e Market Cap logo após Symbol e Security
+    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "GICS Sector",
             "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
     cols_available = [c for c in cols if c in result.columns]
     result_display = result[cols_available].reset_index(drop=True)
