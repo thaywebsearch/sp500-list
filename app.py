@@ -48,20 +48,30 @@ logo_mime = get_mime_type("logo.png")
 #  - fallback "N/A" se o ticker falhar
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 @st.cache_data(ttl=3600, show_spinner=False)
-def fetch_market_data(tickers: tuple) -> tuple[dict, dict]:
+def fetch_market_data(tickers: tuple):
     """
-    Recebe uma tuple de tickers e devolve dois dicts:
+    Recebe uma tuple de tickers e devolve três dicts:
       - prices     : {ticker: preço em USD}
       - market_caps: {ticker: market cap formatado em B/T}
+      - pe_ratios  : {ticker: P/E Ratio formatado}
 
     Estratégia:
       - Price      → yf.download() em batch de 100 (rápido)
-      - Market Cap → yf.Ticker().fast_info (por ticker, mas em cache)
+      - Market Cap → yf.Ticker().fast_info (leve, sem histórico)
+      - P/E Ratio  → yf.Ticker().info["trailingPE"]
+                     (trailing P/E — baseado nos últimos 12 meses reais)
+
+    O que é o P/E Ratio:
+      Preço da ação ÷ Lucro por ação (EPS)
+      → P/E alto  = mercado paga prémio (ex: crescimento esperado)
+      → P/E baixo = empresa barata ou em dificuldade
+      → N/A       = empresa com lucro negativo ou dado indisponível
     """
     import yfinance as yf
 
     prices      = {}
     market_caps = {}
+    pe_ratios   = {}
     batch_size  = 100
     ticker_list = list(tickers)
 
@@ -92,24 +102,39 @@ def fetch_market_data(tickers: tuple) -> tuple[dict, dict]:
             for ticker in batch:
                 prices[ticker] = "N/A"
 
-    # ── MARKET CAP — fast_info por ticker ────────────────────────
-    #    fast_info é leve e não faz download de histórico
+    # ── MARKET CAP + P/E RATIO — info por ticker ─────────────────
+    #    P/E Ratio só disponível em .info (não em fast_info)
+    #    Market Cap usa fast_info (mais rápido)
     for ticker in ticker_list:
         try:
-            info = yf.Ticker(ticker).fast_info
-            cap  = info.market_cap          # valor em USD absoluto
+            t    = yf.Ticker(ticker)
+            info = t.info
+            cap  = t.fast_info.market_cap
+
+            # Market Cap
             if cap is None:
                 market_caps[ticker] = "N/A"
-            elif cap >= 1_000_000_000_000:  # Triliões
+            elif cap >= 1_000_000_000_000:
                 market_caps[ticker] = f"${cap / 1_000_000_000_000:.2f}T"
-            elif cap >= 1_000_000_000:      # Biliões
+            elif cap >= 1_000_000_000:
                 market_caps[ticker] = f"${cap / 1_000_000_000:.2f}B"
-            else:                           # Milhões
+            else:
                 market_caps[ticker] = f"${cap / 1_000_000:.0f}M"
+
+            # P/E Ratio — trailing 12 meses
+            pe = info.get("trailingPE")
+            if pe is None or pe != pe:      # None ou NaN
+                pe_ratios[ticker] = "N/A"
+            elif pe < 0:                    # empresa com prejuízo
+                pe_ratios[ticker] = "neg."
+            else:
+                pe_ratios[ticker] = f"{pe:.1f}x"
+
         except Exception:
             market_caps[ticker] = "N/A"
+            pe_ratios[ticker]   = "N/A"
 
-    return prices, market_caps
+    return prices, market_caps, pe_ratios
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -501,19 +526,22 @@ st.markdown(HEADER, unsafe_allow_html=True)
 with st.spinner("A carregar dados do S&P 500..."):
     df = load_data()
 
-# ── 2. Carrega preços e market caps via yfinance ──────────────────
-with st.spinner("A obter cotações e market caps em tempo real... ⏳  (cache de 1h)"):
-    tickers_tuple        = tuple(df["Symbol"].tolist())
-    prices, market_caps  = fetch_market_data(tickers_tuple)
+# ── 2. Carrega preços, market caps e P/E Ratios via yfinance ──────
+with st.spinner("A obter cotações, market caps e P/E Ratios... ⏳  (cache de 1h)"):
+    tickers_tuple                    = tuple(df["Symbol"].tolist())
+    prices, market_caps, pe_ratios   = fetch_market_data(tickers_tuple)
 
 # ── 3. Adiciona colunas ao DataFrame ──────────────────────────────
 df["Price (USD)"]  = df["Symbol"].map(prices)
 df["Market Cap"]   = df["Symbol"].map(market_caps)
+df["P/E Ratio"]    = df["Symbol"].map(pe_ratios)
 
 # ── Metrics ───────────────────────────────────────────────────────
 valid_prices  = [v for v in prices.values() if v != "N/A"]
 valid_caps    = [v for v in market_caps.values() if v != "N/A"]
+valid_pe      = [v for v in pe_ratios.values() if v not in ("N/A", "neg.")]
 avg_price     = round(sum(valid_prices) / len(valid_prices), 2) if valid_prices else 0
+avg_pe        = round(sum(float(v.replace("x","")) for v in valid_pe) / len(valid_pe), 1) if valid_pe else 0
 
 st.markdown(f"""
 <div class="metric-row">
@@ -536,6 +564,10 @@ st.markdown(f"""
   <div class="metric-card">
     <div class="metric-value">${avg_price}</div>
     <div class="metric-label">Preço médio</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">{avg_pe}x</div>
+    <div class="metric-label">P/E médio S&amp;P</div>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -576,16 +608,16 @@ st.markdown(f"""
 st.markdown("""
 <p class="price-info">
   <span class="price-dot"></span>
-  Cotações e Market Caps em tempo real · Actualização automática a cada hora
+  Cotações · Market Caps · P/E Ratios em tempo real · Actualização automática a cada hora
 </p>
 """, unsafe_allow_html=True)
 
 if len(result) == 0:
     st.warning("Nenhuma empresa encontrada. Tenta outro critério.")
 else:
-    # Reordena colunas — Price e Market Cap logo após Symbol e Security
-    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "GICS Sector",
-            "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
+    # Reordena colunas — Price, Market Cap e P/E logo após Symbol e Security
+    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "P/E Ratio",
+            "GICS Sector", "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
     cols_available = [c for c in cols if c in result.columns]
     result_display = result[cols_available].reset_index(drop=True)
 
