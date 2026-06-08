@@ -72,6 +72,7 @@ def fetch_market_data(tickers: tuple):
     prices      = {}
     market_caps = {}
     pe_ratios   = {}
+    w52_highs   = {}
     batch_size  = 100
     ticker_list = list(tickers)
 
@@ -130,11 +131,26 @@ def fetch_market_data(tickers: tuple):
             else:
                 pe_ratios[ticker] = f"{pe:.1f}x"
 
+            # 52W High — máximo dos últimos 52 semanas
+            # fast_info.year_high é mais leve do que info["fiftyTwoWeekHigh"]
+            high = t.fast_info.year_high
+            if high is None or high != high:
+                w52_highs[ticker] = "N/A"
+            else:
+                # mostra também a % de distância do preço atual ao máximo
+                price_now = prices.get(ticker)
+                if isinstance(price_now, float) and high > 0:
+                    pct = ((price_now - high) / high) * 100
+                    w52_highs[ticker] = f"${high:.2f} ({pct:+.1f}%)"
+                else:
+                    w52_highs[ticker] = f"${high:.2f}"
+
         except Exception:
             market_caps[ticker] = "N/A"
             pe_ratios[ticker]   = "N/A"
+            w52_highs[ticker]   = "N/A"
 
-    return prices, market_caps, pe_ratios
+    return prices, market_caps, pe_ratios, w52_highs
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -526,15 +542,16 @@ st.markdown(HEADER, unsafe_allow_html=True)
 with st.spinner("A carregar dados do S&P 500..."):
     df = load_data()
 
-# ── 2. Carrega preços, market caps e P/E Ratios via yfinance ──────
-with st.spinner("A obter cotações, market caps e P/E Ratios... ⏳  (cache de 1h)"):
-    tickers_tuple                    = tuple(df["Symbol"].tolist())
-    prices, market_caps, pe_ratios   = fetch_market_data(tickers_tuple)
+# ── 2. Carrega preços, market caps, P/E Ratios e 52W High ─────────
+with st.spinner("A obter cotações, market caps, P/E e 52W High... ⏳  (cache de 1h)"):
+    tickers_tuple                              = tuple(df["Symbol"].tolist())
+    prices, market_caps, pe_ratios, w52_highs  = fetch_market_data(tickers_tuple)
 
 # ── 3. Adiciona colunas ao DataFrame ──────────────────────────────
 df["Price (USD)"]  = df["Symbol"].map(prices)
 df["Market Cap"]   = df["Symbol"].map(market_caps)
 df["P/E Ratio"]    = df["Symbol"].map(pe_ratios)
+df["52W High"]     = df["Symbol"].map(w52_highs)
 
 # ── Metrics ───────────────────────────────────────────────────────
 valid_prices  = [v for v in prices.values() if v != "N/A"]
@@ -608,15 +625,15 @@ st.markdown(f"""
 st.markdown("""
 <p class="price-info">
   <span class="price-dot"></span>
-  Cotações · Market Caps · P/E Ratios em tempo real · Actualização automática a cada hora
+  Cotações · Market Caps · P/E Ratios · 52W High em tempo real · Actualização automática a cada hora
 </p>
 """, unsafe_allow_html=True)
 
 if len(result) == 0:
     st.warning("Nenhuma empresa encontrada. Tenta outro critério.")
 else:
-    # Reordena colunas — Price, Market Cap e P/E logo após Symbol e Security
-    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "P/E Ratio",
+    # Reordena colunas — Price, Market Cap, P/E e 52W High logo após Symbol e Security
+    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "P/E Ratio", "52W High",
             "GICS Sector", "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
     cols_available = [c for c in cols if c in result.columns]
     result_display = result[cols_available].reset_index(drop=True)
