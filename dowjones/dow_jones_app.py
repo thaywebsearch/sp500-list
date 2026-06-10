@@ -2,7 +2,7 @@
 ╔══════════════════════════════════════════════════════════════════╗
 ║         Dow Jones · Tabela com Logos                            ║
 ║         CSV: dowjones/dowjones-table.csv  (company·ticker·sector)║
-║         Logos: Clearbit Logo API — gerados em runtime           ║
+║         Logos: Google Favicon API — gratuito, sem API key       ║
 ║         Técnica: ImageColumn · st.data_editor                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
@@ -20,8 +20,9 @@ st.set_page_config(
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #  MAPEAMENTO TICKER → DOMÍNIO
-#  Clearbit Logo API: https://logo.clearbit.com/{dominio}
-#  Não é necessário API key — gratuito para uso normal
+#  Google Favicon API: https://www.google.com/s2/favicons?domain={dominio}&sz=64
+#  ✔ Gratuito · ✔ Sem API key · ✔ Alta disponibilidade
+#  sz=64 → ícone de 64×64px (melhor qualidade disponível)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DOMAINS = {
     "MMM":  "3m.com",
@@ -57,9 +58,15 @@ DOMAINS = {
 }
 
 def get_logo_url(ticker: str) -> str:
-    """Devolve o URL do logo via Clearbit para um dado ticker."""
+    """
+    Devolve o URL do logo via Google Favicon API.
+    Alternativa gratuita e fiável ao Clearbit (que passou a ser pago).
+    sz=64 → ícone de maior qualidade disponível.
+    """
     domain = DOMAINS.get(ticker.strip().upper(), "")
-    return f"https://logo.clearbit.com/{domain}" if domain else ""
+    if domain:
+        return f"https://www.google.com/s2/favicons?domain={domain}&sz=64"
+    return ""
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #  CSS INJECTION
