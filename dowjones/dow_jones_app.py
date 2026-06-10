@@ -1,7 +1,7 @@
 """
 ╔══════════════════════════════════════════════════════════════════╗
 ║         Dow Jones · Tabela com Logos                            ║
-║         CSV: dow jones table.csv  (company · ticker · sector)   ║
+║         CSV: dowjones/dowjones-table.csv  (company·ticker·sector)║
 ║         Logos: Clearbit Logo API — gerados em runtime           ║
 ║         Técnica: ImageColumn · st.data_editor                   ║
 ╚══════════════════════════════════════════════════════════════════╝
@@ -215,7 +215,7 @@ st.markdown("""
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 @st.cache_data
 def load_dj():
-    df = pd.read_csv("dow jones table.csv")   # ← nome exato do teu ficheiro
+    df = pd.read_csv("dowjones/dowjones-table.csv")   # ← pasta/ficheiro exato no GitHub
     df["logo"] = df["ticker"].apply(get_logo_url)
     return df
 
