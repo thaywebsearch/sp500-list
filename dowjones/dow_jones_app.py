@@ -312,10 +312,42 @@ st.download_button(
     mime="text/csv",
 )
 
+# ── Partilhar no Facebook ─────────────────────────────────────────
+#  sharer.php → API oficial do Facebook para partilha de URLs
+#  Abre numa nova aba com o card de pré-visualização do app
+APP_URL   = "https://thaywebsearch-sp500-list-dowjonesdow-jones-app-zfyjpm.streamlit.app/"
+share_url = f"https://www.facebook.com/sharer/sharer.php?u={APP_URL}"
+
+st.markdown(f"""
+<div style="margin-top:16px;">
+  <a href="{share_url}" target="_blank" style="
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1877F2;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .06em;
+    text-decoration: none;
+    transition: background .2s ease;
+    box-shadow: 0 0 18px rgba(24,119,242,.35);
+  ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+    Partilhar no Facebook
+  </a>
+</div>
+""", unsafe_allow_html=True)
+
 # ── Footer ────────────────────────────────────────────────────────
 st.markdown("""
 <div class="dj-footer">
-  ⬡ &nbsp; Logos: Clearbit Logo API &nbsp;·&nbsp;
+  ⬡ &nbsp; Logos: Google Favicon API &nbsp;·&nbsp;
   Dados: Dow Jones Industrial Average &nbsp; ⬡
 </div>
 """, unsafe_allow_html=True)
