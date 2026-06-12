@@ -74,6 +74,7 @@ def fetch_market_data(tickers: tuple):
     pe_ratios   = {}
     w52_highs   = {}
     w52_lows    = {}
+    div_yields  = {}
     batch_size  = 100
     ticker_list = list(tickers)
 
@@ -156,13 +157,23 @@ def fetch_market_data(tickers: tuple):
                 else:
                     w52_lows[ticker] = f"${low:.2f}"
 
+            # Dividend Yield — rendimento do dividendo anual
+            # dividendYield → valor decimal (ex: 0.015 = 1.5%)
+            # N/A → empresa que não paga dividendo
+            dy = info.get("dividendYield")
+            if dy is None or dy != dy or dy == 0:
+                div_yields[ticker] = "—"        # não paga dividendo
+            else:
+                div_yields[ticker] = f"{dy * 100:.2f}%"
+
         except Exception:
             market_caps[ticker] = "N/A"
             pe_ratios[ticker]   = "N/A"
             w52_highs[ticker]   = "N/A"
             w52_lows[ticker]    = "N/A"
+            div_yields[ticker]  = "N/A"
 
-    return prices, market_caps, pe_ratios, w52_highs, w52_lows
+    return prices, market_caps, pe_ratios, w52_highs, w52_lows, div_yields
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -554,17 +565,18 @@ st.markdown(HEADER, unsafe_allow_html=True)
 with st.spinner("A carregar dados do S&P 500..."):
     df = load_data()
 
-# ── 2. Carrega preços, market caps, P/E, 52W High e 52W Low ───────
-with st.spinner("A obter cotações, market caps, P/E, 52W High e 52W Low... ⏳  (cache de 1h)"):
-    tickers_tuple                                        = tuple(df["Symbol"].tolist())
-    prices, market_caps, pe_ratios, w52_highs, w52_lows = fetch_market_data(tickers_tuple)
+# ── 2. Carrega todos os dados de mercado via yfinance ─────────────
+with st.spinner("A obter cotações, market caps, P/E, 52W, Dividend Yield... ⏳  (cache de 1h)"):
+    tickers_tuple                                                    = tuple(df["Symbol"].tolist())
+    prices, market_caps, pe_ratios, w52_highs, w52_lows, div_yields = fetch_market_data(tickers_tuple)
 
 # ── 3. Adiciona colunas ao DataFrame ──────────────────────────────
-df["Price (USD)"]  = df["Symbol"].map(prices)
-df["Market Cap"]   = df["Symbol"].map(market_caps)
-df["P/E Ratio"]    = df["Symbol"].map(pe_ratios)
-df["52W High"]     = df["Symbol"].map(w52_highs)
-df["52W Low"]      = df["Symbol"].map(w52_lows)
+df["Price (USD)"]     = df["Symbol"].map(prices)
+df["Market Cap"]      = df["Symbol"].map(market_caps)
+df["P/E Ratio"]       = df["Symbol"].map(pe_ratios)
+df["52W High"]        = df["Symbol"].map(w52_highs)
+df["52W Low"]         = df["Symbol"].map(w52_lows)
+df["Dividend Yield"]  = df["Symbol"].map(div_yields)
 
 # ── Metrics ───────────────────────────────────────────────────────
 valid_prices  = [v for v in prices.values() if v != "N/A"]
@@ -638,7 +650,7 @@ st.markdown(f"""
 st.markdown("""
 <p class="price-info">
   <span class="price-dot"></span>
-  Cotações · Market Caps · P/E · 52W High · 52W Low em tempo real · Actualização automática a cada hora
+  Cotações · Market Cap · P/E · 52W High/Low · Dividend Yield · Actualização automática a cada hora
 </p>
 """, unsafe_allow_html=True)
 
@@ -646,7 +658,8 @@ if len(result) == 0:
     st.warning("Nenhuma empresa encontrada. Tenta outro critério.")
 else:
     # Reordena colunas — Price, Market Cap, P/E e 52W High logo após Symbol e Security
-    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "P/E Ratio", "52W High", "52W Low",
+    cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "P/E Ratio",
+            "52W High", "52W Low", "Dividend Yield",
             "GICS Sector", "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
     cols_available = [c for c in cols if c in result.columns]
     result_display = result[cols_available].reset_index(drop=True)
