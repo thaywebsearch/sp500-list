@@ -75,6 +75,7 @@ def fetch_market_data(tickers: tuple):
     w52_highs   = {}
     w52_lows    = {}
     div_yields  = {}
+    betas       = {}
     batch_size  = 100
     ticker_list = list(tickers)
 
@@ -166,14 +167,26 @@ def fetch_market_data(tickers: tuple):
             else:
                 div_yields[ticker] = f"{dy * 100:.2f}%"
 
+            # Beta — volatilidade relativa ao S&P 500
+            # β < 1  → menos volátil (ex: utilities, consumer staples)
+            # β = 1  → move-se igual ao mercado
+            # β > 1  → mais volátil (ex: tech, growth)
+            # β < 0  → move-se inversamente ao mercado
+            beta = info.get("beta")
+            if beta is None or beta != beta:
+                betas[ticker] = "N/A"
+            else:
+                betas[ticker] = f"{beta:.2f}"
+
         except Exception:
             market_caps[ticker] = "N/A"
             pe_ratios[ticker]   = "N/A"
             w52_highs[ticker]   = "N/A"
             w52_lows[ticker]    = "N/A"
             div_yields[ticker]  = "N/A"
+            betas[ticker]       = "N/A"
 
-    return prices, market_caps, pe_ratios, w52_highs, w52_lows, div_yields
+    return prices, market_caps, pe_ratios, w52_highs, w52_lows, div_yields, betas
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -566,9 +579,9 @@ with st.spinner("A carregar dados do S&P 500..."):
     df = load_data()
 
 # ── 2. Carrega todos os dados de mercado via yfinance ─────────────
-with st.spinner("A obter cotações, market caps, P/E, 52W, Dividend Yield... ⏳  (cache de 1h)"):
-    tickers_tuple                                                    = tuple(df["Symbol"].tolist())
-    prices, market_caps, pe_ratios, w52_highs, w52_lows, div_yields = fetch_market_data(tickers_tuple)
+with st.spinner("A obter cotações, market caps, P/E, 52W, Dividend Yield, Beta... ⏳  (cache de 1h)"):
+    tickers_tuple                                                          = tuple(df["Symbol"].tolist())
+    prices, market_caps, pe_ratios, w52_highs, w52_lows, div_yields, betas = fetch_market_data(tickers_tuple)
 
 # ── 3. Adiciona colunas ao DataFrame ──────────────────────────────
 df["Price (USD)"]     = df["Symbol"].map(prices)
@@ -577,6 +590,7 @@ df["P/E Ratio"]       = df["Symbol"].map(pe_ratios)
 df["52W High"]        = df["Symbol"].map(w52_highs)
 df["52W Low"]         = df["Symbol"].map(w52_lows)
 df["Dividend Yield"]  = df["Symbol"].map(div_yields)
+df["Beta"]            = df["Symbol"].map(betas)
 
 # ── Metrics ───────────────────────────────────────────────────────
 valid_prices  = [v for v in prices.values() if v != "N/A"]
@@ -650,7 +664,7 @@ st.markdown(f"""
 st.markdown("""
 <p class="price-info">
   <span class="price-dot"></span>
-  Cotações · Market Cap · P/E · 52W High/Low · Dividend Yield · Actualização automática a cada hora
+  Cotações · Market Cap · P/E · 52W High/Low · Dividend Yield · Beta · Actualização automática a cada hora
 </p>
 """, unsafe_allow_html=True)
 
@@ -659,7 +673,7 @@ if len(result) == 0:
 else:
     # Reordena colunas — Price, Market Cap, P/E e 52W High logo após Symbol e Security
     cols = ["Symbol", "Security", "Price (USD)", "Market Cap", "P/E Ratio",
-            "52W High", "52W Low", "Dividend Yield",
+            "52W High", "52W Low", "Dividend Yield", "Beta",
             "GICS Sector", "GICS Sub-Industry", "Headquarters Location", "Date added", "Founded"]
     cols_available = [c for c in cols if c in result.columns]
     result_display = result[cols_available].reset_index(drop=True)
